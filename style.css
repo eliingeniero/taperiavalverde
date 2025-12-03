@@ -1,32 +1,31 @@
 /* ====== Reset y básicos ====== */
-@import url('https://fonts.googleapis.com/css2?family=Cardo&display=swap');
-
 body, html {
   margin: 0;
   padding: 0;
-  font-family: 'Cardo', serif;
-  scroll-behavior: smooth;
-  color: rgb(188,147,57); /* letras doradas */
-  background-color: rgb(0,127,99); /* fondo verde */
+  font-family: 'Cardo', serif; /* fuente cambiada */
+  scroll-behavior: smooth; /* Desplazamiento suave */
+  color: rgb(2,0,0); /* letras cambiadas */
 }
 
 /* ====== Hero (pantalla inicial) ====== */
 .hero {
   height: 100vh;
-  background-color: rgb(0,127,99); /* fondo verde en vez de imagen */
+  background-image: url('images/fondo.png'); /* tu imagen */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+  color: rgb(2,0,0); /* letras cambiadas */
   position: relative;
-  color: rgb(188,147,57); /* letras doradas */
 }
 
 .overlay {
-  background-color: rgb(188,147,57); /* rectángulo dorado */
+  background-color: rgba(0,127,99,0.5); /* color semitransparente cambiado */
   padding: 2rem;
   border-radius: 12px;
-  color: rgb(0,0,0); /* texto dentro del rectángulo negro para contraste */
 }
 
 .titulo {
@@ -42,34 +41,32 @@ body, html {
 .boton-menu {
   display: inline-block;
   padding: 1rem 2rem;
-  background-color: rgb(0,127,99); /* botón verde */
-  color: rgb(188,147,57); /* letras doradas */
+  background-color: rgb(0,127,99); /* color cambiado */
+  color: rgb(2,0,0); /* letras cambiadas */
   text-decoration: none;
   border-radius: 8px;
   transition: background-color 0.3s;
 }
 
 .boton-menu:hover {
-  background-color: rgb(0,100,80);
-  color: #fff;
+  background-color: rgb(0,100,77); /* un poco más oscuro al pasar el mouse */
 }
 
 /* ====== Sección info ====== */
 .info {
   padding: 3rem 1rem;
-  background-color: rgb(188,147,57); /* rectángulo dorado */
+  background-color: #FFFFFF;
   text-align: center;
-  border-radius: 12px;
-  color: rgb(0,0,0); /* texto negro dentro del dorado */
+  color: rgb(2,0,0); /* letras cambiadas */
 }
 
 .info h2 {
+  color: rgb(2,0,0); /* letras cambiadas */
   margin-top: 2rem;
-  color: rgb(0,0,0);
 }
 
 .info .link {
-  color: rgb(0,0,0);
+  color: rgb(2,0,0); /* letras cambiadas */
   text-decoration: none;
 }
 
@@ -83,14 +80,14 @@ body, html {
 .menu-header {
   text-align: center;
   padding: 1.5rem 0 0.5rem 0;
-  background-color: rgb(188,147,57); /* dorado */
-  border-bottom: 1px solid rgb(0,0,0);
+  background-color: #FFFFFF;
+  border-bottom: 1px solid rgb(0,127,99); /* color cambiado */
 }
 
 .menu-header .logo {
   font-size: 2rem;
   font-weight: 700;
-  color: rgb(0,0,0); /* letras negras */
+  color: rgb(2,0,0); /* letras cambiadas */
   text-decoration: none;
 }
 
@@ -105,14 +102,14 @@ body, html {
   padding: 1rem 0;
   position: sticky;
   top: 0;
-  background-color: rgb(188,147,57); /* dorado */
+  background-color: #FFFFFF;
   z-index: 100;
-  border-bottom: 1px solid rgb(0,0,0);
+  border-bottom: 1px solid rgb(0,127,99); /* color cambiado */
 }
 
 .menu-nav a {
   text-decoration: none;
-  color: rgb(0,0,0); /* letras negras */
+  color: rgb(2,0,0); /* letras cambiadas */
   font-weight: bold;
   margin: 0 1rem;
 }
@@ -130,21 +127,19 @@ section#postres {
   padding: 2rem 1rem 3rem 1rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; /* centra horizontalmente */
   text-align: center;
-  background-color: rgb(188,147,57); /* dorado */
-  border-radius: 12px;
-  margin-bottom: 1rem;
+  color: rgb(2,0,0); /* letras cambiadas */
 }
 
 section h2 {
   margin-bottom: 1rem;
-  color: rgb(0,0,0);
+  color: rgb(2,0,0); /* letras cambiadas */
 }
 
 section p {
   margin: 0.3rem 0;
-  color: rgb(0,0,0);
+  color: rgb(2,0,0); /* letras cambiadas */
 }
 
 /* ====== Responsive ====== */
@@ -165,6 +160,7 @@ section p {
   .overlay {
     padding: 1.5rem;
     border-radius: 8px;
+    background-color: rgba(0,127,99,0.5); /* mantengo color semitransparente */
   }
 
   .info {
