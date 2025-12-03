@@ -37,7 +37,7 @@ body, html {
   margin: 0 0 1rem 0;
   display: flex;
   justify-content: center;
-  align-items: flex-start; /* alinea por la línea base */
+  align-items: baseline; /* alinea por la línea base */
   flex-wrap: wrap; /* evita que se salga en pantallas muy pequeñas */
 }
 
