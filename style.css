@@ -63,20 +63,16 @@ body, html {
 .boton-menu {
   display: inline-block;
   padding: 1rem 2rem;
-  background-color: rgb(188,147,57); /* dorado */
+  background-color: rgb(188,147,57); /* dorado sólido */
   color: black; /* texto negro */
   font-family: 'Cardo', serif;
   font-size: 24px;
   font-weight: bold;
   text-decoration: none;
   border-radius: 8px;
+  border: 2px solid black; /* añade borde para que se note más */
   transition: transform 0.2s, background-color 0.2s;
   margin-top: 1rem;
-}
-
-.boton-menu:hover {
-  transform: scale(1.05);
-  background-color: rgb(160,120,50); /* dorado más oscuro al pasar el ratón */
 }
 
 
