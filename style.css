@@ -105,11 +105,24 @@ body, html {
 }
 
 .tituloarriba .logo {
-  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* alinea por arriba */
   font-weight: 700;
-  color: rgb(2,0,0);
   text-decoration: none;
+  color: rgb(2,0,0);
 }
+
+.tituloarriba .logo .titulo-v {
+  font-size: clamp(60px, 8vw, 120px); /* ajusta según quieras */
+  line-height: 1;
+}
+
+.tituloarriba .logo .titulo-resto {
+  font-size: clamp(40px, 5vw, 80px); /* mantiene proporción con la V */
+  line-height: 1;
+}
+
 
 .tituloarriba .logo:hover {
   text-decoration: underline;
