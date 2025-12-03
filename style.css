@@ -1,105 +1,20 @@
-/* ====== Reset y básicos ====== */
-body, html {
-  margin: 0;
-  padding: 0;
-  font-family: 'Cardo', serif;
-  scroll-behavior: smooth;
-  color: rgb(188,147,57); /* dorado principal para el menú */
-  background-color: rgb(0,127,99); /* fondo verde por defecto */
-}
-
-/* ====== Header / Logo ====== */
-.tituloarriba {
+.titulo {
   text-align: center;
-  padding: 1.5rem 0 0.5rem 0;
-  background-color: #FFFFFF; /* solo header en blanco */
-  border-bottom: 1px solid rgb(0,127,99);
-}
-
-.tituloarriba .logo {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start; /* alinea por arriba */
-  font-weight: 700;
-  text-decoration: none;
-  color: rgb(0,0,0); /* VALVERDE en negro en el header */
-}
-
-.tituloarriba .logo .titulo-v {
-  font-size: clamp(60px, 8vw, 120px);
   line-height: 1;
 }
 
-.tituloarriba .logo .titulo-resto {
-  font-size: clamp(40px, 5vw, 80px);
+.titulo-v,
+.titulo-resto {
+  display: inline-block;
+  vertical-align: top; /* fuerza alineación por arriba */
+  margin: 0;
   line-height: 1;
 }
 
-/* ====== Barra de navegación ====== */
-.barraNav {
-  text-align: center;
-  margin: 0;
-  padding: 1rem 0;
-  position: sticky;
-  top: 0;
-  background-color: #FFFFFF; /* barra arriba en blanco */
-  z-index: 100;
-  border-bottom: 1px solid rgb(0,127,99);
+.titulo-v {
+  font-size: clamp(80px, 15vw, 240px);
 }
 
-.barraNav a {
-  text-decoration: none;
-  color: rgb(188,147,57); /* links dorado */
-  font-weight: bold;
-  margin: 0 1rem;
-}
-
-.barraNav a:hover {
-  text-decoration: underline;
-}
-
-/* ====== Secciones del menú ====== */
-section#entrantes,
-section#compartir,
-section#platos,
-section#bebidas,
-section#postres {
-  padding: 2rem 1rem 3rem 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  background-color: rgb(0,127,99); /* fondo verde */
-  color: rgb(188,147,57); /* texto dorado */
-}
-
-section h2 {
-  margin-bottom: 1rem;
-  color: rgb(188,147,57);
-}
-
-section p {
-  margin: 0.3rem 0;
-  color: rgb(188,147,57);
-}
-
-/* Links dentro de las secciones */
-section a {
-  color: rgb(188,147,57);
-  text-decoration: none;
-}
-
-section a:hover {
-  text-decoration: underline;
-}
-
-/* ====== Responsive ====== */
-@media (max-width: 768px) {
-  section#entrantes,
-  section#compartir,
-  section#platos,
-  section#bebidas,
-  section#postres {
-    padding: 1.5rem 1rem 2rem 1rem;
-  }
+.titulo-resto {
+  font-size: clamp(53px, 10vw, 160px);
 }
