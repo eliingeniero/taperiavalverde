@@ -2,14 +2,38 @@
 body, html {
   margin: 0;
   padding: 0;
-  font-family: 'Cardo', serif;
+  font-family: 'Cardo', serif; /* fuente Cardo */
   scroll-behavior: smooth;
-  color: black; /* letras negras por defecto */
-  background-color: rgb(0,127,99); /* fondo verde general */
+  color: rgb(2,0,0); /* letras doradas oscuras */
 }
 
-/* ====== Títulos grandes (V + resto) ====== */
-.titulo {
+/* ====== Pantalla1 (antes Hero) ====== */
+.pantalla1 {
+  height: 100vh;
+  /*background-image: url('images/fondo.png'); /* tu imagen */
+   background-color: rgb(0,127,99); /* color sólido verde */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: rgb(2,0,0); /* letras */
+  position: relative;
+}
+
+/* Rectángulo con título y botón */
+.rectangulo {
+  background-color: rgba(0,127,99,0.5); /* verde semitransparente */
+  padding: 2rem 1rem;
+  border-radius: 12px;
+  max-width: 90vw; /* no se salga del ancho de la pantalla */
+  text-align: center;
+}
+
+/* Título con V grande y resto proporcional */
+  .titulo {
   text-align: center;
   line-height: 1;
 }
@@ -17,7 +41,7 @@ body, html {
 .titulo-v,
 .titulo-resto {
   display: inline-block;
-  vertical-align: top; /* alineación por arriba */
+  vertical-align: top; /* fuerza alineación por arriba */
   margin: 0;
   line-height: 1;
 }
@@ -27,76 +51,108 @@ body, html {
 }
 
 .titulo-resto {
+  font-size: clamp(80px, 10vw, 160px);
   font-size: clamp(53px, 10vw, 160px);
 }
+
+
+
+/* Lema comentado en HTML, no se usa */
+/* .lema {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+} */
+
+/* Botón lanza ver menú */
 
 /* ====== Botón debajo del título ====== */
 .boton-menu {
   display: inline-block;
   padding: 1rem 2rem;
   background-color: black; /* fondo del botón */
-  color: rgb(188,147,57); /* texto dorado */
+  color: rgb(188,147,57); /* texto dorado rgb(188,147,57)*/
   font-family: 'Cardo', serif;
   font-size: 24px;
   font-weight: bold;
   text-decoration: none;
   border-radius: 8px;
-  border: 2px solid black;
+  border: 2px solid black; /* añade borde para que se note más */
   transition: transform 0.2s, background-color 0.2s;
   margin-top: 1rem;
 }
 
-.boton-menu:hover {
-  transform: scale(1.05);
-  background-color: rgb(50,50,50); /* fondo más oscuro al pasar ratón */
+
+/* ====== Pantalla1 Abajo (antes Info) ====== */
+.pantalla1abajo {
+  padding: 3rem 1rem;
+  background-color: #FFFFFF;
+  text-align: center;
+  color: rgb(2,0,0);
 }
 
-/* ====== Header (VALVERDE) ====== */
+.pantalla1abajo h2 {
+  color: rgb(2,0,0);
+  margin-top: 2rem;
+}
+
+.pantalla1abajo .link {
+  color: rgb(2,0,0);
+  text-decoration: none;
+}
+
+.pantalla1abajo .link:hover {
+  text-decoration: underline;
+}
+
+/* ====== Menú ====== */
+
+/* Logo / encabezado en menú (antes menu-header) */
 .tituloarriba {
   text-align: center;
   padding: 1.5rem 0 0.5rem 0;
-  background-color: #FFFFFF; /* header blanco */
+  background-color: #FFFFFF;
   border-bottom: 1px solid rgb(0,127,99);
 }
 
 .tituloarriba .logo {
   display: flex;
   justify-content: center;
-  align-items: flex-start; /* alineación por arriba */
+  align-items: flex-start; /* alinea por arriba */
   font-weight: 700;
   text-decoration: none;
-  color: black; /* VALVERDE negro */
+  color: rgb(2,0,0);
 }
 
 .tituloarriba .logo .titulo-v {
-  font-size: clamp(60px, 8vw, 120px);
+  font-size: clamp(60px, 8vw, 120px); /* ajusta según quieras */
   line-height: 1;
 }
 
 .tituloarriba .logo .titulo-resto {
-  font-size: clamp(40px, 5vw, 80px);
+  font-size: clamp(40px, 5vw, 80px); /* mantiene proporción con la V */
   line-height: 1;
 }
+
 
 .tituloarriba .logo:hover {
   text-decoration: underline;
 }
 
-/* ====== Barra de navegación ====== */
+/* Barra de navegación fija (antes menu-nav) */
 .barraNav {
   text-align: center;
   margin: 0;
   padding: 1rem 0;
   position: sticky;
   top: 0;
-  background-color: #FFFFFF; /* barra blanca */
+  background-color: #FFFFFF;
   z-index: 100;
   border-bottom: 1px solid rgb(0,127,99);
 }
 
 .barraNav a {
   text-decoration: none;
-  color: rgb(188,147,57); /* enlaces dorados */
+  color: rgb(2,0,0);
   font-weight: bold;
   margin: 0 1rem;
 }
@@ -105,49 +161,46 @@ body, html {
   text-decoration: underline;
 }
 
-/* ====== Secciones de contenido ====== */
-.pantalla1,
-.pantalla1abajo,
+/* Centrar contenido de cada sección del menú */
 section#entrantes,
 section#compartir,
 section#platos,
 section#bebidas,
 section#postres {
-  background-color: rgb(0,127,99); /* verde */
-  color: black; /* texto negro */
-  padding: 2rem 1rem;
+  padding: 2rem 1rem 3rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
+  color: rgb(2,0,0);
 }
 
-/* Títulos de secciones */
 section h2 {
-  color: rgb(188,147,57); /* dorado */
   margin-bottom: 1rem;
+  color: rgb(2,0,0);
 }
 
-/* Texto de secciones */
-section p, .pantalla1abajo p {
-  color: black;
-}
-
-/* Links dentro de secciones */
-section a, .pantalla1abajo .link {
-  color: rgb(188,147,57);
-  text-decoration: none;
-}
-
-section a:hover, .pantalla1abajo .link:hover {
-  text-decoration: underline;
+section p {
+  margin: 0.3rem 0;
+  color: rgb(2,0,0);
 }
 
 /* ====== Responsive ====== */
 @media (max-width: 768px) {
+  .titulo {
+    font-size: 2rem;
+  }
+
   .titulo-v {
     font-size: clamp(60px, 20vw, 240px);
   }
 
   .titulo-resto {
     font-size: clamp(40px, 15vw, 160px);
+  }
+
+  .lema {
+    font-size: 1rem;
   }
 
   .boton-menu {
@@ -159,5 +212,9 @@ section a:hover, .pantalla1abajo .link:hover {
     padding: 1.5rem;
     border-radius: 8px;
     background-color: rgba(0,127,99,0.5);
+  }
+
+  .pantalla1abajo {
+    padding: 2rem 1rem;
   }
 }
