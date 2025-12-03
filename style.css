@@ -1,31 +1,32 @@
 /* ====== Reset y básicos ====== */
+@import url('https://fonts.googleapis.com/css2?family=Cardo&display=swap');
+
 body, html {
   margin: 0;
   padding: 0;
-  font-family: 'Roboto', sans-serif;
-  scroll-behavior: smooth; /* Desplazamiento suave */
-  color: #00541A; /* verde Aston Martin */
+  font-family: 'Cardo', serif;
+  scroll-behavior: smooth;
+  color: rgb(188,147,57); /* letras doradas */
+  background-color: rgb(0,127,99); /* fondo verde */
 }
 
 /* ====== Hero (pantalla inicial) ====== */
 .hero {
   height: 100vh;
-  background-image: url('images/fondo.png'); /* tu imagen */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-color: rgb(0,127,99); /* fondo verde en vez de imagen */
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: #FFFFFF;
   position: relative;
+  color: rgb(188,147,57); /* letras doradas */
 }
 
 .overlay {
-  background-color: rgba(0, 84, 26, 0.5);
+  background-color: rgb(188,147,57); /* rectángulo dorado */
   padding: 2rem;
   border-radius: 12px;
+  color: rgb(0,0,0); /* texto dentro del rectángulo negro para contraste */
 }
 
 .titulo {
@@ -41,31 +42,34 @@ body, html {
 .boton-menu {
   display: inline-block;
   padding: 1rem 2rem;
-  background-color: #00541A;
-  color: #FFFFFF;
+  background-color: rgb(0,127,99); /* botón verde */
+  color: rgb(188,147,57); /* letras doradas */
   text-decoration: none;
   border-radius: 8px;
   transition: background-color 0.3s;
 }
 
 .boton-menu:hover {
-  background-color: #004016;
+  background-color: rgb(0,100,80);
+  color: #fff;
 }
 
 /* ====== Sección info ====== */
 .info {
   padding: 3rem 1rem;
-  background-color: #FFFFFF;
+  background-color: rgb(188,147,57); /* rectángulo dorado */
   text-align: center;
+  border-radius: 12px;
+  color: rgb(0,0,0); /* texto negro dentro del dorado */
 }
 
 .info h2 {
-  color: #00541A;
   margin-top: 2rem;
+  color: rgb(0,0,0);
 }
 
 .info .link {
-  color: #00541A;
+  color: rgb(0,0,0);
   text-decoration: none;
 }
 
@@ -79,14 +83,14 @@ body, html {
 .menu-header {
   text-align: center;
   padding: 1.5rem 0 0.5rem 0;
-  background-color: #FFFFFF;
-  border-bottom: 1px solid #00541A;
+  background-color: rgb(188,147,57); /* dorado */
+  border-bottom: 1px solid rgb(0,0,0);
 }
 
 .menu-header .logo {
   font-size: 2rem;
   font-weight: 700;
-  color: #00541A;
+  color: rgb(0,0,0); /* letras negras */
   text-decoration: none;
 }
 
@@ -101,14 +105,14 @@ body, html {
   padding: 1rem 0;
   position: sticky;
   top: 0;
-  background-color: #FFFFFF;
+  background-color: rgb(188,147,57); /* dorado */
   z-index: 100;
-  border-bottom: 1px solid #00541A;
+  border-bottom: 1px solid rgb(0,0,0);
 }
 
 .menu-nav a {
   text-decoration: none;
-  color: #00541A;
+  color: rgb(0,0,0); /* letras negras */
   font-weight: bold;
   margin: 0 1rem;
 }
@@ -126,17 +130,21 @@ section#postres {
   padding: 2rem 1rem 3rem 1rem;
   display: flex;
   flex-direction: column;
-  align-items: center; /* centra horizontalmente */
+  align-items: center;
   text-align: center;
+  background-color: rgb(188,147,57); /* dorado */
+  border-radius: 12px;
+  margin-bottom: 1rem;
 }
 
 section h2 {
   margin-bottom: 1rem;
-  color: #00541A;
+  color: rgb(0,0,0);
 }
 
 section p {
   margin: 0.3rem 0;
+  color: rgb(0,0,0);
 }
 
 /* ====== Responsive ====== */
@@ -157,7 +165,6 @@ section p {
   .overlay {
     padding: 1.5rem;
     border-radius: 8px;
-    background-color: rgba(0, 84, 26, 0.6);
   }
 
   .info {
