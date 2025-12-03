@@ -2,13 +2,13 @@
 body, html {
   margin: 0;
   padding: 0;
-  font-family: 'Cardo', serif; /* fuente cambiada */
-  scroll-behavior: smooth; /* Desplazamiento suave */
-  color: rgb(2,0,0); /* letras cambiadas */
+  font-family: 'Cardo', serif; /* fuente Cardo */
+  scroll-behavior: smooth;
+  color: rgb(2,0,0); /* letras doradas oscuras */
 }
 
-/* ====== Hero (pantalla inicial) ====== */
-.hero {
+/* ====== Pantalla1 (antes Hero) ====== */
+.pantalla1 {
   height: 100vh;
   background-image: url('images/fondo.png'); /* tu imagen */
   background-size: cover;
@@ -18,12 +18,12 @@ body, html {
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: rgb(2,0,0); /* letras cambiadas */
+  color: rgb(2,0,0); /* letras */
   position: relative;
 }
 
-.overlay {
-  background-color: rgba(0,127,99,0.5); /* color semitransparente cambiado */
+.rectangulo { /* antes overlay */
+  background-color: rgba(0,127,99,0.5); /* verde semitransparente */
   padding: 2rem;
   border-radius: 12px;
 }
@@ -41,62 +41,62 @@ body, html {
 .boton-menu {
   display: inline-block;
   padding: 1rem 2rem;
-  background-color: rgb(0,127,99); /* color cambiado */
-  color: rgb(2,0,0); /* letras cambiadas */
+  background-color: rgb(0,127,99);
+  color: rgb(2,0,0);
   text-decoration: none;
   border-radius: 8px;
   transition: background-color 0.3s;
 }
 
 .boton-menu:hover {
-  background-color: rgb(0,100,77); /* un poco más oscuro al pasar el mouse */
+  background-color: rgb(0,100,77); /* un poco más oscuro */
 }
 
-/* ====== Sección info ====== */
-.info {
+/* ====== Pantalla1 Abajo (antes Info) ====== */
+.pantalla1abajo {
   padding: 3rem 1rem;
   background-color: #FFFFFF;
   text-align: center;
-  color: rgb(2,0,0); /* letras cambiadas */
+  color: rgb(2,0,0);
 }
 
-.info h2 {
-  color: rgb(2,0,0); /* letras cambiadas */
+.pantalla1abajo h2 {
+  color: rgb(2,0,0);
   margin-top: 2rem;
 }
 
-.info .link {
-  color: rgb(2,0,0); /* letras cambiadas */
+.pantalla1abajo .link {
+  color: rgb(2,0,0);
   text-decoration: none;
 }
 
-.info .link:hover {
+.pantalla1abajo .link:hover {
   text-decoration: underline;
 }
 
 /* ====== Menú ====== */
 
-/* Logo / encabezado en menú */
-.menu-header {
+/* Logo / encabezado en menú (antes menu-header) */
+.tituloarriba {
   text-align: center;
   padding: 1.5rem 0 0.5rem 0;
   background-color: #FFFFFF;
-  border-bottom: 1px solid rgb(0,127,99); /* color cambiado */
+  border-bottom: 1px solid rgb(0,127,99);
 }
 
-.menu-header .logo {
+.tituloarriba .logo {
   font-size: 2rem;
   font-weight: 700;
-  color: rgb(2,0,0); /* letras cambiadas */
+  color: rgb(2,0,0);
   text-decoration: none;
 }
 
-.menu-header .logo:hover {
+.tituloarriba .logo:hover {
   text-decoration: underline;
 }
 
-/* Barra de navegación fija */
-.menu-nav {
+/* Barra de navegación fija (antes menu-nav) */
+.barraNav {
   text-align: center;
   margin: 0;
   padding: 1rem 0;
@@ -104,21 +104,21 @@ body, html {
   top: 0;
   background-color: #FFFFFF;
   z-index: 100;
-  border-bottom: 1px solid rgb(0,127,99); /* color cambiado */
+  border-bottom: 1px solid rgb(0,127,99);
 }
 
-.menu-nav a {
+.barraNav a {
   text-decoration: none;
-  color: rgb(2,0,0); /* letras cambiadas */
+  color: rgb(2,0,0);
   font-weight: bold;
   margin: 0 1rem;
 }
 
-.menu-nav a:hover {
+.barraNav a:hover {
   text-decoration: underline;
 }
 
-/* Centrar contenido de cada sección */
+/* Centrar contenido de cada sección del menú */
 section#entrantes,
 section#compartir,
 section#platos,
@@ -127,19 +127,19 @@ section#postres {
   padding: 2rem 1rem 3rem 1rem;
   display: flex;
   flex-direction: column;
-  align-items: center; /* centra horizontalmente */
+  align-items: center;
   text-align: center;
-  color: rgb(2,0,0); /* letras cambiadas */
+  color: rgb(2,0,0);
 }
 
 section h2 {
   margin-bottom: 1rem;
-  color: rgb(2,0,0); /* letras cambiadas */
+  color: rgb(2,0,0);
 }
 
 section p {
   margin: 0.3rem 0;
-  color: rgb(2,0,0); /* letras cambiadas */
+  color: rgb(2,0,0);
 }
 
 /* ====== Responsive ====== */
@@ -157,13 +157,13 @@ section p {
     font-size: 0.9rem;
   }
 
-  .overlay {
+  .rectangulo {
     padding: 1.5rem;
     border-radius: 8px;
-    background-color: rgba(0,127,99,0.5); /* mantengo color semitransparente */
+    background-color: rgba(0,127,99,0.5);
   }
 
-  .info {
+  .pantalla1abajo {
     padding: 2rem 1rem;
   }
 }
