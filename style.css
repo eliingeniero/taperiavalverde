@@ -11,7 +11,7 @@ body, html {
 .pantalla1 {
   height: 100vh;
   /*background-image: url('images/fondo.png'); /* tu imagen */
-   background-color: rgb(0,127,99); /* color sólido verde */
+  background-color: rgb(0,127,99); /* color sólido verde */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -33,7 +33,7 @@ body, html {
 }
 
 /* Título con V grande y resto proporcional */
-  .titulo {
+.titulo {
   text-align: center;
   line-height: 1;
 }
@@ -51,36 +51,24 @@ body, html {
 }
 
 .titulo-resto {
-  font-size: clamp(80px, 10vw, 160px);
   font-size: clamp(53px, 10vw, 160px);
 }
 
-
-
-/* Lema comentado en HTML, no se usa */
-/* .lema {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-} */
-
-/* Botón lanza ver menú */
-
-/* ====== Botón debajo del título ====== */
+/* Botón debajo del título */
 .boton-menu {
   display: inline-block;
   padding: 1rem 2rem;
   background-color: black; /* fondo del botón */
-  color: rgb(188,147,57); /* texto dorado rgb(188,147,57)*/
+  color: rgb(188,147,57); /* texto dorado */
   font-family: 'Cardo', serif;
   font-size: 24px;
   font-weight: bold;
   text-decoration: none;
   border-radius: 8px;
-  border: 2px solid black; /* añade borde para que se note más */
+  border: 2px solid black;
   transition: transform 0.2s, background-color 0.2s;
   margin-top: 1rem;
 }
-
 
 /* ====== Pantalla1 Abajo (antes Info) ====== */
 .pantalla1abajo {
@@ -105,8 +93,7 @@ body, html {
 }
 
 /* ====== Menú ====== */
-
-/* Logo / encabezado en menú (antes menu-header) */
+/* Logo / encabezado en menú */
 .tituloarriba {
   text-align: center;
   padding: 1.5rem 0 0.5rem 0;
@@ -124,21 +111,20 @@ body, html {
 }
 
 .tituloarriba .logo .titulo-v {
-  font-size: clamp(60px, 8vw, 120px); /* ajusta según quieras */
+  font-size: clamp(60px, 8vw, 120px);
   line-height: 1;
 }
 
 .tituloarriba .logo .titulo-resto {
-  font-size: clamp(40px, 5vw, 80px); /* mantiene proporción con la V */
+  font-size: clamp(40px, 5vw, 80px);
   line-height: 1;
 }
-
 
 .tituloarriba .logo:hover {
   text-decoration: underline;
 }
 
-/* Barra de navegación fija (antes menu-nav) */
+/* Barra de navegación fija */
 .barraNav {
   text-align: center;
   margin: 0;
@@ -199,10 +185,6 @@ section p {
     font-size: clamp(40px, 15vw, 160px);
   }
 
-  .lema {
-    font-size: 1rem;
-  }
-
   .boton-menu {
     padding: 0.8rem 1.5rem;
     font-size: 0.9rem;
@@ -217,12 +199,9 @@ section p {
   .pantalla1abajo {
     padding: 2rem 1rem;
   }
+}
 
-
-
-
-
-  /* ====== Estilos específicos para menu.html ====== */
+/* ====== Estilos específicos para menu.html ====== */
 .estilosMenu {
   background-color: rgb(0,127,99); /* fondo verde */
   color: #000000; /* texto negro por defecto */
@@ -260,7 +239,7 @@ section p {
 
 /* Secciones del menú */
 .estilosMenu section {
-  background-color: rgba(255,255,255,0.1); /* un ligero fondo blanco semitransparente opcional */
+  background-color: rgba(255,255,255,0.1); /* ligero fondo semitransparente */
   color: #000000; /* texto negro */
   padding: 2rem 1rem;
   margin-bottom: 1rem;
@@ -274,6 +253,4 @@ section p {
 
 .estilosMenu section p {
   color: #000000; /* platos en negro */
-}
-
 }
