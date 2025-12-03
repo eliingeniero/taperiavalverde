@@ -34,22 +34,27 @@ body, html {
 
 /* Título con V grande y resto proporcional */
 .titulo {
-  margin: 0 0 1rem 0;
   display: flex;
   justify-content: center;
-  align-items: baseline; /* alinea por la línea base */
-  flex-wrap: wrap; /* evita que se salga en pantallas muy pequeñas */
+  align-items: flex-start; /* Alinea por arriba */
+  flex-wrap: wrap;
+  margin: 0 0 1rem 0;
+  line-height: 1; /* evitar espacios extra por line-height */
 }
 
 .titulo-v {
-  font-size: clamp(80px, 15vw, 240px); /* V grande, adaptable */
+  font-size: clamp(80px, 15vw, 240px); /* tamaño grande y adaptable */
   line-height: 1;
+  margin: 0; /* elimina márgenes extra */
 }
 
 .titulo-resto {
-  font-size: clamp(53px, 10vw, 160px); /* resto proporcional a V */
+  font-size: clamp(53px, 10vw, 160px); /* proporcional a la V */
   line-height: 1;
+  margin: 0; /* elimina márgenes extra */
+  align-self: flex-start; /* fuerza que se alinee por arriba con la V */
 }
+
 
 /* Lema comentado en HTML, no se usa */
 /* .lema {
