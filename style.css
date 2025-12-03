@@ -1,4 +1,6 @@
-/* Reset básico */
+/* ==========================
+   Reset básico
+========================== */
 * {
   margin: 0;
   padding: 0;
@@ -10,6 +12,11 @@ body {
   background-color: #fff;
   color: #000;
 }
+
+/* ==========================
+   Fuentes Google Fonts
+========================== */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Cormorant+Garamond:wght@400;700&display=swap');
 
 /* ==========================
    Sección Hero
@@ -24,18 +31,19 @@ body {
 }
 
 .hero .overlay {
-  background-color: rgb(0,127,99); /* Verde para el rectángulo */
+  background-color: rgb(0,127,99);
   padding: 50px 30px;
   text-align: center;
   border-radius: 15px;
 }
 
 .hero .titulo {
-  font-family: 'Centaur', serif;
-  font-weight: bold;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
   font-size: 160px;
   color: rgb(0,0,0); /* Negro */
-  /* color: rgb(188,147,57); /* Alternativa dorada */ */
+  /* color: rgb(188,147,57); /* Alternativa dorada */
+  line-height: 1;
   margin-bottom: 20px;
 }
 
@@ -61,39 +69,23 @@ body {
   color: #000;
 }
 
-/* ==========================
-   Secciones Info
-========================== */
-.info {
-  padding: 60px 20px;
-  max-width: 900px;
-  margin: 0 auto;
-}
+/* Responsive Hero */
+@media (max-width: 768px) {
+  .hero .titulo {
+    font-size: 80px;
+  }
 
-.info h2 {
-  font-family: 'Centaur', serif;
-  font-weight: bold;
-  font-size: 36px;
-  color: rgb(0,127,99); /* Verde para títulos */
-  margin-bottom: 10px;
-}
+  .hero .lema {
+    font-size: 18px;
+  }
 
-.info p {
-  font-size: 18px;
-  margin-bottom: 20px;
-}
-
-.link {
-  color: rgb(0,127,99);
-  text-decoration: none;
-}
-
-.link:hover {
-  text-decoration: underline;
+  .hero .overlay {
+    padding: 30px 20px;
+  }
 }
 
 /* ==========================
-   Menú
+   Secciones Info y Menú
 ========================== */
 section {
   padding: 50px 20px;
@@ -104,21 +96,21 @@ section {
 }
 
 section h2 {
-  font-family: 'Centaur', serif;
-  font-weight: bold;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
   font-size: 48px;
   color: rgb(0,0,0); /* Negro */
-  /* color: rgb(188,147,57); /* Alternativa dorada */ */
+  /* color: rgb(188,147,57); /* Alternativa dorada */
   margin-bottom: 20px;
   text-align: center;
 }
 
 section p {
-  font-family: 'Centaur', serif;
-  font-weight: bold;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
   font-size: 32px;
   color: rgb(0,0,0); /* Negro */
-  /* color: rgb(188,147,57); /* Alternativa dorada */ */
+  /* color: rgb(188,147,57); /* Alternativa dorada */
   margin: 10px 0;
   text-align: center;
 }
@@ -132,11 +124,11 @@ section p {
 }
 
 .menu-nav a {
-  font-family: 'Centaur', serif;
-  font-weight: bold;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
   font-size: 24px;
   color: rgb(0,0,0); /* Negro */
-  /* color: rgb(188,147,57); /* Alternativa dorada */ */
+  /* color: rgb(188,147,57); /* Alternativa dorada */
   text-decoration: none;
   margin: 0 10px;
 }
@@ -150,11 +142,23 @@ section p {
 ========================== */
 .menu-header .logo {
   display: inline-block;
-  font-family: 'Centaur', serif;
-  font-weight: bold;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
   font-size: 36px;
   color: rgb(0,0,0); /* Negro */
-  /* color: rgb(188,147,57); /* Alternativa dorada */ */
+  /* color: rgb(188,147,57); /* Alternativa dorada */
   text-decoration: none;
   margin: 20px;
+}
+
+/* ==========================
+   Enlaces
+========================== */
+.link {
+  color: rgb(0,127,99);
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
 }
