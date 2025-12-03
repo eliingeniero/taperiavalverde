@@ -10,7 +10,8 @@ body, html {
 /* ====== Pantalla1 (antes Hero) ====== */
 .pantalla1 {
   height: 100vh;
-  background-image: url('images/fondo.png'); /* tu imagen */
+  /*background-image: url('images/fondo.png'); /* tu imagen */
+   background-color: rgb(0,127,99); /* color sólido verde */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
