@@ -1,32 +1,160 @@
-/* Fondo del rectángulo del encabezado y navegación */
-.menu-header,
-.menu-nav {
-  background-color: rgb(0,127,99);
-  padding: 15px;
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #fff;
+  color: #000;
+}
+
+/* ==========================
+   Sección Hero
+========================== */
+.hero {
+  position: relative;
+  height: 100vh;
+  background: url('fondo-hero.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero .overlay {
+  background-color: rgb(0,127,99); /* Verde para el rectángulo */
+  padding: 50px 30px;
+  text-align: center;
+  border-radius: 15px;
+}
+
+.hero .titulo {
+  font-family: 'Centaur', serif;
+  font-weight: bold;
+  font-size: 160px;
+  color: rgb(0,0,0); /* Negro */
+  /* color: rgb(188,147,57); /* Alternativa dorada */ */
+  margin-bottom: 20px;
+}
+
+.hero .lema {
+  font-size: 24px;
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+.hero .boton-menu {
+  display: inline-block;
+  padding: 15px 40px;
+  background-color: #fff;
+  color: rgb(0,127,99);
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.hero .boton-menu:hover {
+  background-color: rgb(188,147,57);
+  color: #000;
+}
+
+/* ==========================
+   Secciones Info
+========================== */
+.info {
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.info h2 {
+  font-family: 'Centaur', serif;
+  font-weight: bold;
+  font-size: 36px;
+  color: rgb(0,127,99); /* Verde para títulos */
+  margin-bottom: 10px;
+}
+
+.info p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.link {
+  color: rgb(0,127,99);
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+/* ==========================
+   Menú
+========================== */
+section {
+  padding: 50px 20px;
+  max-width: 900px;
+  margin: 40px auto;
+  background-color: rgb(0,127,99); /* Fondo verde */
+  border-radius: 15px;
+}
+
+section h2 {
+  font-family: 'Centaur', serif;
+  font-weight: bold;
+  font-size: 48px;
+  color: rgb(0,0,0); /* Negro */
+  /* color: rgb(188,147,57); /* Alternativa dorada */ */
+  margin-bottom: 20px;
   text-align: center;
 }
 
-/* Tipografía general del menú */
-.menu-header .logo,
-.menu-nav a,
-section h2,
 section p {
-  font-family: "Centaur", "Centaur Bold", serif;
+  font-family: 'Centaur', serif;
   font-weight: bold;
-  font-size: 160px;
-
-  color: rgb(188,147,57); /* Color actual */
-
-  /* color: rgb(2,0,0); */ /* ← Alternativa comentada que pediste */
+  font-size: 32px;
+  color: rgb(0,0,0); /* Negro */
+  /* color: rgb(188,147,57); /* Alternativa dorada */ */
+  margin: 10px 0;
+  text-align: center;
 }
 
-/* Opcional: mantener buena visualización para enlaces del menú */
+/* ==========================
+   Navegación menú
+========================== */
+.menu-nav {
+  text-align: center;
+  margin: 20px 0;
+}
+
 .menu-nav a {
+  font-family: 'Centaur', serif;
+  font-weight: bold;
+  font-size: 24px;
+  color: rgb(0,0,0); /* Negro */
+  /* color: rgb(188,147,57); /* Alternativa dorada */ */
   text-decoration: none;
   margin: 0 10px;
 }
 
-/* Mantener formateo general del contenido */
-section {
-  padding: 20px;
+.menu-nav a:hover {
+  color: rgb(188,147,57);
+}
+
+/* ==========================
+   Logo cabecera
+========================== */
+.menu-header .logo {
+  display: inline-block;
+  font-family: 'Centaur', serif;
+  font-weight: bold;
+  font-size: 36px;
+  color: rgb(0,0,0); /* Negro */
+  /* color: rgb(188,147,57); /* Alternativa dorada */ */
+  text-decoration: none;
+  margin: 20px;
 }
