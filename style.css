@@ -9,8 +9,8 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: #fff;
-  color: #000;
+  background-color: rgb(0,127,99); /* Fondo verde de toda la página */
+  color: rgb(0,0,0); /* Letras negras */
 }
 
 /* ==========================
@@ -23,16 +23,15 @@ body {
 ========================== */
 .hero {
   position: relative;
-  height: 100vh;
-  background: url('fondo-hero.jpg') center/cover no-repeat;
+  height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .hero .overlay {
-  background-color: rgb(0,127,99);
-  padding: 50px 30px;
+  background-color: rgb(188,147,57); /* Rectángulo dorado */
+  padding: 30px 20px;
   text-align: center;
   border-radius: 15px;
 }
@@ -40,24 +39,23 @@ body {
 .hero .titulo {
   font-family: 'Cormorant Garamond', serif;
   font-weight: 700;
-  font-size: 160px;
-  color: rgb(0,0,0); /* Negro */
-  /* color: rgb(188,147,57); /* Alternativa dorada */
-  line-height: 1;
-  margin-bottom: 20px;
+  font-size: 64px; /* Tamaño normal */
+  color: rgb(0,0,0);
+  line-height: 1.2;
+  margin-bottom: 15px;
 }
 
 .hero .lema {
-  font-size: 24px;
-  color: #fff;
-  margin-bottom: 30px;
+  font-size: 20px;
+  color: rgb(0,0,0);
+  margin-bottom: 20px;
 }
 
 .hero .boton-menu {
   display: inline-block;
-  padding: 15px 40px;
-  background-color: #fff;
-  color: rgb(0,127,99);
+  padding: 12px 30px;
+  background-color: rgb(0,127,99); /* Fondo verde del botón */
+  color: rgb(0,0,0);
   text-decoration: none;
   font-weight: bold;
   border-radius: 10px;
@@ -65,53 +63,36 @@ body {
 }
 
 .hero .boton-menu:hover {
-  background-color: rgb(188,147,57);
-  color: #000;
-}
-
-/* Responsive Hero */
-@media (max-width: 768px) {
-  .hero .titulo {
-    font-size: 80px;
-  }
-
-  .hero .lema {
-    font-size: 18px;
-  }
-
-  .hero .overlay {
-    padding: 30px 20px;
-  }
+  background-color: rgb(0,100,80);
+  color: #fff;
 }
 
 /* ==========================
    Secciones Info y Menú
 ========================== */
 section {
-  padding: 50px 20px;
+  padding: 30px 20px;
   max-width: 900px;
-  margin: 40px auto;
-  background-color: rgb(0,127,99); /* Fondo verde */
+  margin: 30px auto;
+  background-color: rgb(188,147,57); /* Rectángulo dorado */
   border-radius: 15px;
 }
 
 section h2 {
   font-family: 'Cormorant Garamond', serif;
   font-weight: 700;
-  font-size: 48px;
-  color: rgb(0,0,0); /* Negro */
-  /* color: rgb(188,147,57); /* Alternativa dorada */
-  margin-bottom: 20px;
+  font-size: 36px;
+  color: rgb(0,0,0);
+  margin-bottom: 15px;
   text-align: center;
 }
 
 section p {
   font-family: 'Cormorant Garamond', serif;
   font-weight: 700;
-  font-size: 32px;
-  color: rgb(0,0,0); /* Negro */
-  /* color: rgb(188,147,57); /* Alternativa dorada */
-  margin: 10px 0;
+  font-size: 20px;
+  color: rgb(0,0,0);
+  margin: 8px 0;
   text-align: center;
 }
 
@@ -120,21 +101,20 @@ section p {
 ========================== */
 .menu-nav {
   text-align: center;
-  margin: 20px 0;
+  margin: 15px 0;
 }
 
 .menu-nav a {
   font-family: 'Cormorant Garamond', serif;
   font-weight: 700;
-  font-size: 24px;
-  color: rgb(0,0,0); /* Negro */
-  /* color: rgb(188,147,57); /* Alternativa dorada */
+  font-size: 20px;
+  color: rgb(0,0,0);
   text-decoration: none;
-  margin: 0 10px;
+  margin: 0 8px;
 }
 
 .menu-nav a:hover {
-  color: rgb(188,147,57);
+  color: rgb(0,50,40);
 }
 
 /* ==========================
@@ -144,9 +124,8 @@ section p {
   display: inline-block;
   font-family: 'Cormorant Garamond', serif;
   font-weight: 700;
-  font-size: 36px;
-  color: rgb(0,0,0); /* Negro */
-  /* color: rgb(188,147,57); /* Alternativa dorada */
+  font-size: 28px;
+  color: rgb(0,0,0);
   text-decoration: none;
   margin: 20px;
 }
@@ -155,10 +134,40 @@ section p {
    Enlaces
 ========================== */
 .link {
-  color: rgb(0,127,99);
+  color: rgb(0,0,0);
   text-decoration: none;
 }
 
 .link:hover {
   text-decoration: underline;
+}
+
+/* ==========================
+   Responsive
+========================== */
+@media (max-width: 768px) {
+  .hero .titulo {
+    font-size: 40px;
+  }
+
+  .hero .lema {
+    font-size: 16px;
+  }
+
+  section h2 {
+    font-size: 28px;
+  }
+
+  section p {
+    font-size: 16px;
+  }
+
+  .menu-nav a {
+    font-size: 16px;
+    margin: 0 5px;
+  }
+
+  .menu-header .logo {
+    font-size: 22px;
+  }
 }
