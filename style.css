@@ -22,22 +22,41 @@ body, html {
   position: relative;
 }
 
-.rectangulo { /* antes overlay */
+/* Rectángulo con título y botón */
+.rectangulo {
   background-color: rgba(0,127,99,0.5); /* verde semitransparente */
-  padding: 2rem;
+  padding: 2rem 1rem;
   border-radius: 12px;
+  max-width: 90vw; /* no se salga del ancho de la pantalla */
+  text-align: center;
 }
 
+/* Título con V grande y resto proporcional */
 .titulo {
-  font-size: 3rem;
   margin: 0 0 1rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: baseline; /* alinea por la línea base */
+  flex-wrap: wrap; /* evita que se salga en pantallas muy pequeñas */
 }
 
-.lema {
+.titulo-v {
+  font-size: clamp(80px, 15vw, 240px); /* V grande, adaptable */
+  line-height: 1;
+}
+
+.titulo-resto {
+  font-size: clamp(53px, 10vw, 160px); /* resto proporcional a V */
+  line-height: 1;
+}
+
+/* Lema comentado en HTML, no se usa */
+/* .lema {
   font-size: 1.2rem;
   margin-bottom: 2rem;
-}
+} */
 
+/* Botón debajo del título */
 .boton-menu {
   display: inline-block;
   padding: 1rem 2rem;
@@ -46,6 +65,7 @@ body, html {
   text-decoration: none;
   border-radius: 8px;
   transition: background-color 0.3s;
+  margin-top: 1rem;
 }
 
 .boton-menu:hover {
@@ -146,6 +166,14 @@ section p {
 @media (max-width: 768px) {
   .titulo {
     font-size: 2rem;
+  }
+
+  .titulo-v {
+    font-size: clamp(60px, 20vw, 240px);
+  }
+
+  .titulo-resto {
+    font-size: clamp(40px, 15vw, 160px);
   }
 
   .lema {
