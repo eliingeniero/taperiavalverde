@@ -1,166 +1,32 @@
-/* ====== Reset y básicos ====== */
-body, html {
-  margin: 0;
-  padding: 0;
-  font-family: 'Roboto', sans-serif;
-  scroll-behavior: smooth; /* Desplazamiento suave */
-  color: #00541A; /* verde Aston Martin */
-}
-
-/* ====== Hero (pantalla inicial) ====== */
-.hero {
-  height: 100vh;
-  background-image: url('images/fondo.png'); /* tu imagen */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: #FFFFFF;
-  position: relative;
-}
-
-.overlay {
-  background-color: rgba(0, 84, 26, 0.5);
-  padding: 2rem;
-  border-radius: 12px;
-}
-
-.titulo {
-  font-size: 3rem;
-  margin: 0 0 1rem 0;
-}
-
-.lema {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-}
-
-.boton-menu {
-  display: inline-block;
-  padding: 1rem 2rem;
-  background-color: #00541A;
-  color: #FFFFFF;
-  text-decoration: none;
-  border-radius: 8px;
-  transition: background-color 0.3s;
-}
-
-.boton-menu:hover {
-  background-color: #004016;
-}
-
-/* ====== Sección info ====== */
-.info {
-  padding: 3rem 1rem;
-  background-color: #FFFFFF;
-  text-align: center;
-}
-
-.info h2 {
-  color: #00541A;
-  margin-top: 2rem;
-}
-
-.info .link {
-  color: #00541A;
-  text-decoration: none;
-}
-
-.info .link:hover {
-  text-decoration: underline;
-}
-
-/* ====== Menú ====== */
-
-/* Logo / encabezado en menú */
-.menu-header {
-  text-align: center;
-  padding: 1.5rem 0 0.5rem 0;
-  background-color: #FFFFFF;
-  border-bottom: 1px solid #00541A;
-}
-
-.menu-header .logo {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #00541A;
-  text-decoration: none;
-}
-
-.menu-header .logo:hover {
-  text-decoration: underline;
-}
-
-/* Barra de navegación fija */
+/* Fondo del rectángulo del encabezado y navegación */
+.menu-header,
 .menu-nav {
+  background-color: rgb(0,127,99);
+  padding: 15px;
   text-align: center;
-  margin: 0;
-  padding: 1rem 0;
-  position: sticky;
-  top: 0;
-  background-color: #FFFFFF;
-  z-index: 100;
-  border-bottom: 1px solid #00541A;
 }
 
+/* Tipografía general del menú */
+.menu-header .logo,
+.menu-nav a,
+section h2,
+section p {
+  font-family: "Centaur", "Centaur Bold", serif;
+  font-weight: bold;
+  font-size: 160px;
+
+  color: rgb(188,147,57); /* Color actual */
+
+  /* color: rgb(2,0,0); */ /* ← Alternativa comentada que pediste */
+}
+
+/* Opcional: mantener buena visualización para enlaces del menú */
 .menu-nav a {
   text-decoration: none;
-  color: #00541A;
-  font-weight: bold;
-  margin: 0 1rem;
+  margin: 0 10px;
 }
 
-.menu-nav a:hover {
-  text-decoration: underline;
-}
-
-/* Centrar contenido de cada sección */
-section#entrantes,
-section#compartir,
-section#platos,
-section#bebidas,
-section#postres {
-  padding: 2rem 1rem 3rem 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* centra horizontalmente */
-  text-align: center;
-}
-
-section h2 {
-  margin-bottom: 1rem;
-  color: #00541A;
-}
-
-section p {
-  margin: 0.3rem 0;
-}
-
-/* ====== Responsive ====== */
-@media (max-width: 768px) {
-  .titulo {
-    font-size: 2rem;
-  }
-
-  .lema {
-    font-size: 1rem;
-  }
-
-  .boton-menu {
-    padding: 0.8rem 1.5rem;
-    font-size: 0.9rem;
-  }
-
-  .overlay {
-    padding: 1.5rem;
-    border-radius: 8px;
-    background-color: rgba(0, 84, 26, 0.6);
-  }
-
-  .info {
-    padding: 2rem 1rem;
-  }
+/* Mantener formateo general del contenido */
+section {
+  padding: 20px;
 }
