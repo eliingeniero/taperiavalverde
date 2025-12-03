@@ -33,27 +33,27 @@ body, html {
 }
 
 /* Título con V grande y resto proporcional */
-.titulo {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start; /* Alinea por arriba */
-  flex-wrap: wrap;
-  margin: 0 0 1rem 0;
-  line-height: 1; /* evitar espacios extra por line-height */
+  .titulo {
+  text-align: center;
+  line-height: 1;
+}
+
+.titulo-v,
+.titulo-resto {
+  display: inline-block;
+  vertical-align: top; /* fuerza alineación por arriba */
+  margin: 0;
+  line-height: 1;
 }
 
 .titulo-v {
-  font-size: clamp(80px, 15vw, 240px); /* tamaño grande y adaptable */
-  line-height: 2;
-  margin: 0; /* elimina márgenes extra */
+  font-size: clamp(80px, 15vw, 240px);
 }
 
 .titulo-resto {
-  font-size: clamp(53px, 10vw, 160px); /* proporcional a la V */
-  line-height: 1;
-  margin: 0; /* elimina márgenes extra */
-  align-self: flex-start; /* fuerza que se alinee por arriba con la V */
+  font-size: clamp(53px, 10vw, 160px);
 }
+
 
 
 /* Lema comentado en HTML, no se usa */
