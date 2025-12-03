@@ -63,8 +63,8 @@ body, html {
 .boton-menu {
   display: inline-block;
   padding: 1rem 2rem;
-  background-color: rgb(188,147,57); /* dorado sólido */
-  color: black; /* texto negro */
+  background-color: black; /* fondo del botón */
+  color: rgb(188,147,57); /* texto dorado */
   font-family: 'Cardo', serif;
   font-size: 24px;
   font-weight: bold;
