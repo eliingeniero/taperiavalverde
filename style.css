@@ -11,7 +11,7 @@ body, html {
 .pantalla1 {
   height: 100vh;
   /*background-image: url('images/fondo.png'); /* tu imagen */
-  background-color: rgb(0,127,99); /* color sólido verde */
+  background-color: rgb(0,89,70); /* color sólido verde */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
