@@ -1,173 +1,175 @@
-/* ==========================
-   Reset básico
-========================== */
-* {
+/* ====== Reset y básicos ====== */
+body, html {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Roboto', sans-serif;
-  background-color: rgb(0,127,99); /* Fondo verde de toda la página */
+  font-family: 'Cormorant Garamond', serif;
+  scroll-behavior: smooth;
+  background-color: rgb(0,127,99); /* Fondo verde */
   color: rgb(0,0,0); /* Letras negras */
 }
 
-/* ==========================
-   Fuentes Google Fonts
-========================== */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Cormorant+Garamond:wght@400;700&display=swap');
+/* ====== Fuentes desde Google Fonts ====== */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&display=swap');
 
-/* ==========================
-   Sección Hero
-========================== */
+/* ====== Hero (pantalla inicial) ====== */
 .hero {
-  position: relative;
-  height: 80vh;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.hero .overlay {
-  background-color: rgb(188,147,57); /* Rectángulo dorado */
-  padding: 30px 20px;
   text-align: center;
-  border-radius: 15px;
+  position: relative;
+  background-color: rgb(0,127,99); /* fondo verde */
 }
 
-.hero .titulo {
-  font-family: 'Cormorant Garamond', serif;
+.overlay {
+  background-color: rgb(188,147,57); /* Rectángulo dorado */
+  padding: 2rem;
+  border-radius: 12px;
+}
+
+.titulo {
+  font-size: 3rem;
+  margin: 0 0 1rem 0;
   font-weight: 700;
-  font-size: 64px; /* Tamaño normal */
   color: rgb(0,0,0);
-  line-height: 1.2;
-  margin-bottom: 15px;
 }
 
-.hero .lema {
-  font-size: 20px;
+.lema {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
   color: rgb(0,0,0);
-  margin-bottom: 20px;
 }
 
-.hero .boton-menu {
+.boton-menu {
   display: inline-block;
-  padding: 12px 30px;
-  background-color: rgb(0,127,99); /* Fondo verde del botón */
-  color: rgb(0,0,0);
+  padding: 1rem 2rem;
+  background-color: rgb(0,127,99); /* botón verde */
+  color: rgb(0,0,0); /* letras negras */
   text-decoration: none;
-  font-weight: bold;
-  border-radius: 10px;
-  transition: all 0.3s ease;
+  border-radius: 8px;
+  font-weight: 700;
+  transition: background-color 0.3s;
 }
 
-.hero .boton-menu:hover {
+.boton-menu:hover {
   background-color: rgb(0,100,80);
-  color: #fff;
+  color: rgb(255,255,255);
 }
 
-/* ==========================
-   Secciones Info y Menú
-========================== */
-section {
-  padding: 30px 20px;
-  max-width: 900px;
-  margin: 30px auto;
-  background-color: rgb(188,147,57); /* Rectángulo dorado */
-  border-radius: 15px;
-}
-
-section h2 {
-  font-family: 'Cormorant Garamond', serif;
-  font-weight: 700;
-  font-size: 36px;
-  color: rgb(0,0,0);
-  margin-bottom: 15px;
+/* ====== Sección info ====== */
+.info {
+  padding: 3rem 1rem;
+  background-color: rgb(188,147,57); /* rectángulo dorado */
   text-align: center;
+  border-radius: 12px;
 }
 
-section p {
-  font-family: 'Cormorant Garamond', serif;
-  font-weight: 700;
-  font-size: 20px;
+.info h2 {
   color: rgb(0,0,0);
-  margin: 8px 0;
-  text-align: center;
+  margin-top: 2rem;
 }
 
-/* ==========================
-   Navegación menú
-========================== */
-.menu-nav {
-  text-align: center;
-  margin: 15px 0;
-}
-
-.menu-nav a {
-  font-family: 'Cormorant Garamond', serif;
-  font-weight: 700;
-  font-size: 20px;
-  color: rgb(0,0,0);
-  text-decoration: none;
-  margin: 0 8px;
-}
-
-.menu-nav a:hover {
-  color: rgb(0,50,40);
-}
-
-/* ==========================
-   Logo cabecera
-========================== */
-.menu-header .logo {
-  display: inline-block;
-  font-family: 'Cormorant Garamond', serif;
-  font-weight: 700;
-  font-size: 28px;
-  color: rgb(0,0,0);
-  text-decoration: none;
-  margin: 20px;
-}
-
-/* ==========================
-   Enlaces
-========================== */
-.link {
+.info .link {
   color: rgb(0,0,0);
   text-decoration: none;
 }
 
-.link:hover {
+.info .link:hover {
   text-decoration: underline;
 }
 
-/* ==========================
-   Responsive
-========================== */
+/* ====== Menú ====== */
+
+/* Logo / encabezado en menú */
+.menu-header {
+  text-align: center;
+  padding: 1.5rem 0 0.5rem 0;
+  background-color: rgb(188,147,57); /* dorado */
+  border-bottom: 1px solid rgb(0,0,0);
+}
+
+.menu-header .logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: rgb(0,0,0);
+  text-decoration: none;
+}
+
+.menu-header .logo:hover {
+  text-decoration: underline;
+}
+
+/* Barra de navegación fija */
+.menu-nav {
+  text-align: center;
+  margin: 0;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  background-color: rgb(188,147,57); /* dorado */
+  z-index: 100;
+  border-bottom: 1px solid rgb(0,0,0);
+}
+
+.menu-nav a {
+  text-decoration: none;
+  color: rgb(0,0,0);
+  font-weight: bold;
+  margin: 0 1rem;
+}
+
+.menu-nav a:hover {
+  text-decoration: underline;
+}
+
+/* Centrar contenido de cada sección */
+section#entrantes,
+section#compartir,
+section#platos,
+section#bebidas,
+section#postres {
+  padding: 2rem 1rem 3rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centra horizontalmente */
+  text-align: center;
+  background-color: rgb(188,147,57); /* dorado */
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+section h2 {
+  margin-bottom: 1rem;
+  color: rgb(0,0,0);
+}
+
+section p {
+  margin: 0.3rem 0;
+  color: rgb(0,0,0);
+}
+
+/* ====== Responsive ====== */
 @media (max-width: 768px) {
-  .hero .titulo {
-    font-size: 40px;
+  .titulo {
+    font-size: 2rem;
   }
 
-  .hero .lema {
-    font-size: 16px;
+  .lema {
+    font-size: 1rem;
   }
 
-  section h2 {
-    font-size: 28px;
+  .boton-menu {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
   }
 
-  section p {
-    font-size: 16px;
+  .overlay {
+    padding: 1.5rem;
+    border-radius: 8px;
   }
 
-  .menu-nav a {
-    font-size: 16px;
-    margin: 0 5px;
-  }
-
-  .menu-header .logo {
-    font-size: 22px;
+  .info {
+    padding: 2rem 1rem;
   }
 }
