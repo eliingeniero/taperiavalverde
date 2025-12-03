@@ -59,49 +59,26 @@ body, html {
 
 /* Botón lanza ver menú */
 
-.boton-menu {
-  display: flex;
-  flex-direction: column; /* SVG arriba, texto abajo */
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;   /* Quita subrayado del link */
-  border: 2px solid black;
-  background-color: transparent;
-  padding: 10px;
-  width: 100px;
-  height: 120px;
-  cursor: pointer;
-}
-
-.boton-menu svg {
-  width: 60px;
-  height: 60px;
-  margin-bottom: 8px; /* separa el texto */
-}
-
-.texto-menu {
-  font-family: 'Cardo', serif;
-  font-weight: bold;
-  font-size: 18px;
-  color: black;
-}
-
-
-/* Botón debajo del título 
+/* ====== Botón debajo del título ====== */
 .boton-menu {
   display: inline-block;
   padding: 1rem 2rem;
-  background-color: rgb(0,127,99);
-  color: rgb(2,0,0);
+  background-color: rgb(188,147,57); /* dorado */
+  color: black; /* texto negro */
+  font-family: 'Cardo', serif;
+  font-size: 24px;
+  font-weight: bold;
   text-decoration: none;
   border-radius: 8px;
-  transition: background-color 0.3s;
+  transition: transform 0.2s, background-color 0.2s;
   margin-top: 1rem;
 }
 
 .boton-menu:hover {
-  background-color: rgb(0,100,77); /* un poco más oscuro *
-} */
+  transform: scale(1.05);
+  background-color: rgb(160,120,50); /* dorado más oscuro al pasar el ratón */
+}
+
 
 /* ====== Pantalla1 Abajo (antes Info) ====== */
 .pantalla1abajo {
