@@ -44,7 +44,7 @@ body, html {
 
 .titulo-v {
   font-size: clamp(80px, 15vw, 240px); /* tamaño grande y adaptable */
-  line-height: 1;
+  line-height: 2;
   margin: 0; /* elimina márgenes extra */
 }
 
