@@ -35,6 +35,8 @@ body, html {
 .titulo-resto {
   font-size: clamp(53px, 10vw, 160px);
   line-height: 1;
+  display: inline-block;
+ /* transform: translateY(0.05em); /* ajusta este valor hasta que se vea bien */
 }
 
 
