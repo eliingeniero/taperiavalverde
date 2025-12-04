@@ -11,6 +11,7 @@
   --letras-platos: 1.3rem;     /* tamaño de los nombres de los platos */
   --letras-expl: 1rem;         /* tamaño de la explicación */
   --letras-precio: 1rem;       /* tamaño del precio */
+  --letras-grupoMenu: 1.5rem;  /* tamaño de los títulos de los grupos de platos */
 
   /* Separación entre grupos de platos */
   --separacion-grupo: 2rem;
@@ -159,6 +160,7 @@ body, html {
 
 .gruposPlatosMenu {
   color: var(--color-ppal);
+  font-size: var(--letras-grupoMenu);
   margin-bottom: 1rem;
 }
 
