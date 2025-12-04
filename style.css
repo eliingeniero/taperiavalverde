@@ -20,7 +20,6 @@
 /* ====== Reset y básicos ====== */
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 100px; /* Ajusta este valor a la altura de tu barra sticky */
 }
 
 body {
@@ -192,6 +191,10 @@ body {
 
 /* ====== Responsive ====== */
 @media (max-width: 768px) {
+
+  html {
+    scroll-padding-top: 100px; /* Ajusta este valor a la altura de tu barra sticky en móvil */
+  }
 
   /* Títulos grandes */
   .titulo-v {
