@@ -164,7 +164,7 @@ body {
 }
 
 .gruposPlatosMenu {
-  color: var(--color-ppal);
+  color: var(--color-sec);
   font-size: var(--letras-grupoMenu);
   margin-bottom: 1rem;
 }
