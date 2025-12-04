@@ -1,33 +1,33 @@
+/* ====== Variables de color ====== */
+:root {
+  --color-ppal: rgb(188,147,57);  /* granate/dorado del título */
+  --color-sec: #000000;            /* negro */
+  --color-fondo: rgb(0,127,99);    /* verde principal de fondo */
+  --color-fondo-semi: rgba(255,255,255,0.1); /* fondo semitransparente para secciones */
+  --color-blanco: #FFFFFF;
+}
+
 /* ====== Reset y básicos ====== */
 body, html {
   margin: 0;
   padding: 0;
   font-family: 'Cardo', serif;
   scroll-behavior: smooth;
-  color: rgb(2,0,0);
-  background-color: rgb(0,127,99);
+  color: var(--color-sec);
+  background-color: var(--color-fondo);
 }
 
-/* ====== Pantalla1 (inicio) ====== */
-.pantalla1 {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  background-color: rgb(1,59,54);
-  color: rgb(188,147,57);
-}
-
-.rectangulo {
-  background-color: rgba(30,71,66,0.7);
-  padding: 2rem 1rem;
-  border-radius: 12px;
-  max-width: 90vw;
-}
-
+/* ====== Títulos grandes ====== */
 .titulo {
   text-align: center;
+  line-height: 1;
+}
+
+.titulo-v,
+.titulo-resto {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0;
   line-height: 1;
 }
 
@@ -39,32 +39,55 @@ body, html {
   font-size: clamp(53px, 10vw, 160px);
 }
 
+/* ====== Pantalla1 (Index Hero) ====== */
+.pantalla1 {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--color-ppal);
+  position: relative;
+}
+
+.rectangulo {
+  background-color: rgba(30,71,66,0); /* transparente */
+  padding: 2rem 1rem;
+  border-radius: 12px;
+  max-width: 90vw;
+  text-align: center;
+}
+
+/* Botón principal */
 .boton-menu {
   display: inline-block;
   padding: 1rem 2rem;
   background-color: black;
-  color: rgb(188,147,57);
-  font-size: 1.2rem;
+  color: var(--color-ppal);
+  font-size: 24px;
   font-weight: bold;
   text-decoration: none;
   border-radius: 8px;
+  border: 2px solid black;
+  transition: transform 0.2s, background-color 0.2s;
   margin-top: 1rem;
 }
 
 /* ====== Pantalla1 Abajo ====== */
 .pantalla1abajo {
   padding: 3rem 1rem;
-  background-color: #FFFFFF;
+  background-color: var(--color-blanco);
   text-align: center;
-  color: rgb(2,0,0);
+  color: var(--color-sec);
 }
 
 .pantalla1abajo h2 {
+  color: var(--color-sec);
   margin-top: 2rem;
 }
 
 .pantalla1abajo .link {
-  color: rgb(2,0,0);
+  color: var(--color-sec);
   text-decoration: none;
 }
 
@@ -72,141 +95,98 @@ body, html {
   text-decoration: underline;
 }
 
-/* ====== Menú ====== */
-.estilosMenu {
-  font-family: 'Cardo', serif;
-  padding-bottom: 3rem;
-  background-color: rgb(0,127,99);
-}
-
-/* Logo y encabezado */
+/* ====== Encabezado / Logo ====== */
 .tituloarriba {
   text-align: center;
   padding: 1.5rem 0 0.5rem 0;
-  background-color: rgb(0,127,99);
-  border-bottom: 2px solid #BC9339;
+  background-color: var(--color-fondo);
+  border-bottom: 2px solid var(--color-ppal);
 }
 
 .tituloarriba .logo {
   display: flex;
   justify-content: center;
-  color: #BC9339;
+  align-items: flex-start;
+  font-weight: 700;
   text-decoration: none;
+  color: var(--color-ppal);
 }
 
-.tituloarriba .titulo-v {
-  font-size: clamp(60px, 8vw, 120px);
+.tituloarriba .logo:hover {
+  text-decoration: underline;
 }
 
-.tituloarriba .titulo-resto {
-  font-size: clamp(40px, 5vw, 80px);
-}
-
-/* Barra de navegación */
+/* ====== Barra de navegación ====== */
 .barraNav {
   text-align: center;
   margin: 0;
   padding: 1rem 0;
   position: sticky;
   top: 0;
-  background-color: rgb(0,127,99);
-  border-bottom: 2px solid #BC9339;
+  background-color: var(--color-fondo);
   z-index: 100;
+  border-bottom: 2px solid var(--color-ppal);
 }
 
 .barraNav a {
   text-decoration: none;
-  color: #BC9339;
+  color: var(--color-ppal);
   font-weight: bold;
-  margin: 0 0.5rem;
+  margin: 0 1rem;
 }
 
 .barraNav a:hover {
   text-decoration: underline;
 }
 
-/* Secciones del menú */
-.estilosMenu section {
-  background-color: rgba(255,255,255,0.1);
-  color: #000000;
+/* ====== Secciones del menú ====== */
+section {
+  background-color: var(--color-fondo-semi);
+  color: var(--color-sec);
   padding: 2rem 1rem;
-  margin: 1rem auto;
+  margin-bottom: 1rem;
   border-radius: 8px;
-  max-width: 800px;
-}
-
-/* Títulos de sección */
-.estilosMenu section h2 {
-  color: #BC9339;
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
   text-align: center;
 }
 
-/* Platos: nombre, descripción y precio */
-.estilosMenu section p {
-  margin: 1rem 0;
-  line-height: 1.4;
+section h2 {
+  color: var(--color-ppal);
+  margin-bottom: 1rem;
 }
 
-.estilosMenu section p strong {
-  display: block;
-  color: #BC9339;
-  font-size: 1.2rem;
-  margin-bottom: 0.2rem;
+section p strong,
+section p span {
+  color: var(--color-ppal);
 }
 
-.estilosMenu section p small {
-  display: block;
-  font-size: 0.9rem;
-  color: #f0f0f0;
-  margin-bottom: 0.2rem;
-}
-
-.estilosMenu section p span {
-  display: block;
-  color: #BC9339;
-  font-weight: bold;
-}
-
-/* Listas (salsas) */
-.estilosMenu section ul {
-  list-style: disc;
-  padding-left: 1.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.estilosMenu section ul li {
-  margin: 0.3rem 0;
-  color: #f0f0f0;
-  font-size: 1rem;
-}
-
-/* Último texto (small) en salsas */
-.estilosMenu section small {
-  display: block;
-  margin-top: 0.5rem;
-  font-size: 0.9rem;
-  color: #f0f0f0;
+section p small,
+section ul li,
+section small {
+  color: var(--color-sec);
 }
 
 /* ====== Responsive ====== */
 @media (max-width: 768px) {
   .titulo-v {
-    font-size: clamp(50px, 20vw, 120px);
+    font-size: clamp(60px, 20vw, 240px);
   }
 
   .titulo-resto {
-    font-size: clamp(30px, 15vw, 80px);
+    font-size: clamp(40px, 15vw, 160px);
   }
 
   .boton-menu {
     padding: 0.8rem 1.5rem;
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 
-  .estilosMenu section {
-    padding: 1.5rem 1rem;
-    margin: 1rem 1rem;
+  .rectangulo {
+    padding: 1.5rem;
+    border-radius: 8px;
+    background-color: rgba(0,127,99,0.5);
+  }
+
+  .pantalla1abajo {
+    padding: 2rem 1rem;
   }
 }
