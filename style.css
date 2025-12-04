@@ -1,1 +1,258 @@
-/* ====== Reset y básicos ====== */ body, html { margin: 0; padding: 0; font-family: 'Cardo', serif; /* fuente Cardo */ scroll-behavior: smooth; color: rgb(2,0,0); /* letras doradas oscuras */ } /* ====== Pantalla1 (antes Hero) ====== */ .pantalla1 { height: 100vh; /*background-image: url('images/fondo.png'); /* tu imagen */ background-color: rgb(1,59,54); /* color sólido verde rgb(1,59,54) */ background-size: cover; background-position: center; background-repeat: no-repeat; display: flex; align-items: center; justify-content: center; text-align: center; color: rgb(84,0,0); /* letras rgb(188,147,57) */ position: relative; } /* Rectángulo con título y botón */ .rectangulo { background-color: rgba(30,71,66,0); /* verde semitransparente */ padding: 2rem 1rem; border-radius: 12px; max-width: 90vw; /* no se salga del ancho de la pantalla */ text-align: center; } /* Título con V grande y resto proporcional */ .titulo { text-align: center; line-height: 1; } .titulo-v, .titulo-resto { display: inline-block; vertical-align: top; /* fuerza alineación por arriba */ margin: 0; line-height: 1; } .titulo-v { font-size: clamp(80px, 15vw, 240px); } .titulo-resto { font-size: clamp(53px, 10vw, 160px); } /* Botón debajo del título */ .boton-menu { display: inline-block; padding: 1rem 2rem; background-color: black; /* fondo del botón */ color: rgb(188,147,57); /* texto dorado */ font-family: 'Cardo', serif; font-size: 24px; font-weight: bold; text-decoration: none; border-radius: 8px; border: 2px solid black; transition: transform 0.2s, background-color 0.2s; margin-top: 1rem; } /* ====== Pantalla1 Abajo (antes Info) ====== */ .pantalla1abajo { padding: 3rem 1rem; background-color: #FFFFFF; text-align: center; color: rgb(2,0,0); } .pantalla1abajo h2 { color: rgb(2,0,0); margin-top: 2rem; } .pantalla1abajo .link { color: rgb(2,0,0); text-decoration: none; } .pantalla1abajo .link:hover { text-decoration: underline; } /* ====== Menú ====== */ /* Logo / encabezado en menú */ .tituloarriba { text-align: center; padding: 1.5rem 0 0.5rem 0; background-color: #FFFFFF; border-bottom: 1px solid rgb(0,127,99); } .tituloarriba .logo { display: flex; justify-content: center; align-items: flex-start; /* alinea por arriba */ font-weight: 700; text-decoration: none; color: rgb(2,0,0); } .tituloarriba .logo .titulo-v { font-size: clamp(60px, 8vw, 120px); line-height: 1; } .tituloarriba .logo .titulo-resto { font-size: clamp(40px, 5vw, 80px); line-height: 1; } .tituloarriba .logo:hover { text-decoration: underline; } /* Barra de navegación fija */ .barraNav { text-align: center; margin: 0; padding: 1rem 0; position: sticky; top: 0; background-color: #FFFFFF; z-index: 100; border-bottom: 1px solid rgb(0,127,99); } .barraNav a { text-decoration: none; color: rgb(2,0,0); font-weight: bold; margin: 0 1rem; } .barraNav a:hover { text-decoration: underline; } /* Centrar contenido de cada sección del menú */ section#entrantes, section#compartir, section#platos, section#bebidas, section#postres { padding: 2rem 1rem 3rem 1rem; display: flex; flex-direction: column; align-items: center; text-align: center; color: rgb(2,0,0); } section h2 { margin-bottom: 1rem; color: rgb(2,0,0); } section p { margin: 0.3rem 0; color: rgb(2,0,0); } /* ====== Responsive ====== */ @media (max-width: 768px) { .titulo { font-size: 2rem; } .titulo-v { font-size: clamp(60px, 20vw, 240px); } .titulo-resto { font-size: clamp(40px, 15vw, 160px); } .boton-menu { padding: 0.8rem 1.5rem; font-size: 0.9rem; } .rectangulo { padding: 1.5rem; border-radius: 8px; background-color: rgba(0,127,99,0.5); } .pantalla1abajo { padding: 2rem 1rem; } } /* ====== Estilos específicos para menu.html ====== */ .estilosMenu { background-color: rgb(0,127,99); /* fondo verde */ color: #000000; /* texto negro por defecto */ font-family: 'Cardo', serif; } /* Logo / título */ .estilosMenu .tituloarriba { background-color: rgb(0,127,99); /* fondo verde del header */ border-bottom: 2px solid #BC9339; /* dorado */ } .estilosMenu .tituloarriba .logo { color: #BC9339; /* títulos dorados */ } .estilosMenu .tituloarriba .logo .titulo-v, .estilosMenu .tituloarriba .logo .titulo-resto { color: #BC9339; /* título completo dorado */ } /* Barra de navegación */ .estilosMenu .barraNav { background-color: rgb(0,127,99); /* fondo verde */ border-bottom: 2px solid #BC9339; /* línea dorada */ } .estilosMenu .barraNav a { color: #BC9339; /* enlaces dorados */ } .estilosMenu .barraNav a:hover { text-decoration: underline; } /* Secciones del menú */ .estilosMenu section { background-color: rgba(255,255,255,0.1); /* ligero fondo semitransparente */ color: #000000; /* texto negro */ padding: 2rem 1rem; margin-bottom: 1rem; border-radius: 8px; } .estilosMenu section h2 { color: #BC9339; /* títulos de sección dorados */ margin-bottom: 1rem; } .estilosMenu section p { color: #000000; /* platos en negro */ } .listaPlatos { padding: 20px; max-width: 600px; margin: auto; text-align: left; font-family: 'Cardo', serif; } .menu-simple { list-style: none; padding: 0; margin: 0; } .menu-simple li { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid rgba(188,147,57,0.3); /* dorado muy suave */ font-size: 1.2rem; } .menu-simple .precio { font-weight: bold; color: rgb(188,147,57); }
+/* ====== Reset y básicos ====== */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Cardo', serif; /* fuente Cardo */
+  scroll-behavior: smooth;
+  color: rgb(2,0,0); /* letras doradas oscuras */
+}
+
+/* ====== Pantalla1 (antes Hero) ====== */
+.pantalla1 {
+  height: 100vh;
+  /*background-image: url('images/fondo.png'); /* tu imagen */
+  background-color: rgb(1,59,54); /* color sólido verde */
+  background-color: rgb(1,59,54); /* color sólido verde rgb(1,59,54) */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: rgb(188,147,57); /* letras */
+  color: rgb(84,0,0); /* letras rgb(188,147,57) */
+  position: relative;
+}
+
+/* Rectángulo con título y botón */
+.rectangulo {
+  background-color: rgba(30,71,66,0); /* verde semitransparente */
+  padding: 2rem 1rem;
+  border-radius: 12px;
+  max-width: 90vw; /* no se salga del ancho de la pantalla */
+  text-align: center;
+}
+
+/* Título con V grande y resto proporcional */
+.titulo {
+  text-align: center;
+  line-height: 1;
+}
+
+.titulo-v,
+.titulo-resto {
+  display: inline-block;
+  vertical-align: top; /* fuerza alineación por arriba */
+  margin: 0;
+  line-height: 1;
+}
+
+.titulo-v {
+  font-size: clamp(80px, 15vw, 240px);
+}
+
+.titulo-resto {
+  font-size: clamp(53px, 10vw, 160px);
+}
+
+/* Botón debajo del título */
+.boton-menu {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: black; /* fondo del botón */
+  color: rgb(188,147,57); /* texto dorado */
+  font-family: 'Cardo', serif;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  border: 2px solid black;
+  transition: transform 0.2s, background-color 0.2s;
+  margin-top: 1rem;
+}
+
+/* ====== Pantalla1 Abajo (antes Info) ====== */
+.pantalla1abajo {
+  padding: 3rem 1rem;
+  background-color: #FFFFFF;
+  text-align: center;
+  color: rgb(2,0,0);
+}
+
+.pantalla1abajo h2 {
+  color: rgb(2,0,0);
+  margin-top: 2rem;
+}
+
+.pantalla1abajo .link {
+  color: rgb(2,0,0);
+  text-decoration: none;
+}
+
+.pantalla1abajo .link:hover {
+  text-decoration: underline;
+}
+
+/* ====== Menú ====== */
+/* Logo / encabezado en menú */
+.tituloarriba {
+  text-align: center;
+  padding: 1.5rem 0 0.5rem 0;
+  background-color: #FFFFFF;
+  border-bottom: 1px solid rgb(0,127,99);
+}
+
+.tituloarriba .logo {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* alinea por arriba */
+  font-weight: 700;
+  text-decoration: none;
+  color: rgb(2,0,0);
+}
+
+.tituloarriba .logo .titulo-v {
+  font-size: clamp(60px, 8vw, 120px);
+  line-height: 1;
+}
+
+.tituloarriba .logo .titulo-resto {
+  font-size: clamp(40px, 5vw, 80px);
+  line-height: 1;
+}
+
+.tituloarriba .logo:hover {
+  text-decoration: underline;
+}
+
+/* Barra de navegación fija */
+.barraNav {
+  text-align: center;
+  margin: 0;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  background-color: #FFFFFF;
+  z-index: 100;
+  border-bottom: 1px solid rgb(0,127,99);
+}
+
+.barraNav a {
+  text-decoration: none;
+  color: rgb(2,0,0);
+  font-weight: bold;
+  margin: 0 1rem;
+}
+
+.barraNav a:hover {
+  text-decoration: underline;
+}
+
+/* Centrar contenido de cada sección del menú */
+section#entrantes,
+section#compartir,
+section#platos,
+section#bebidas,
+section#postres {
+  padding: 2rem 1rem 3rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: rgb(2,0,0);
+}
+
+section h2 {
+  margin-bottom: 1rem;
+  color: rgb(2,0,0);
+}
+
+section p {
+  margin: 0.3rem 0;
+  color: rgb(2,0,0);
+}
+
+/* ====== Responsive ====== */
+@media (max-width: 768px) {
+  .titulo {
+    font-size: 2rem;
+  }
+
+  .titulo-v {
+    font-size: clamp(60px, 20vw, 240px);
+  }
+
+  .titulo-resto {
+    font-size: clamp(40px, 15vw, 160px);
+  }
+
+  .boton-menu {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .rectangulo {
+    padding: 1.5rem;
+    border-radius: 8px;
+    background-color: rgba(0,127,99,0.5);
+  }
+
+  .pantalla1abajo {
+    padding: 2rem 1rem;
+  }
+}
+
+/* ====== Estilos específicos para menu.html ====== */
+.estilosMenu {
+  background-color: rgb(0,127,99); /* fondo verde */
+  color: #000000; /* texto negro por defecto */
+  font-family: 'Cardo', serif;
+}
+
+/* Logo / título */
+.estilosMenu .tituloarriba {
+  background-color: rgb(0,127,99); /* fondo verde del header */
+  border-bottom: 2px solid #BC9339; /* dorado */
+}
+
+.estilosMenu .tituloarriba .logo {
+  color: #BC9339; /* títulos dorados */
+}
+
+.estilosMenu .tituloarriba .logo .titulo-v,
+.estilosMenu .tituloarriba .logo .titulo-resto {
+  color: #BC9339; /* título completo dorado */
+}
+
+/* Barra de navegación */
+.estilosMenu .barraNav {
+  background-color: rgb(0,127,99); /* fondo verde */
+  border-bottom: 2px solid #BC9339; /* línea dorada */
+}
+
+.estilosMenu .barraNav a {
+  color: #BC9339; /* enlaces dorados */
+}
+
+.estilosMenu .barraNav a:hover {
+  text-decoration: underline;
+}
+
+/* Secciones del menú */
+.estilosMenu section {
+  background-color: rgba(255,255,255,0.1); /* ligero fondo semitransparente */
+  color: #000000; /* texto negro */
+  padding: 2rem 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+}
+
+.estilosMenu section h2 {
+  color: #BC9339; /* títulos de sección dorados */
+  margin-bottom: 1rem;
+}
+
+.estilosMenu section p {
+  color: #000000; /* platos en negro */
+}
