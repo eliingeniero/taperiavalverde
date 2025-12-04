@@ -74,7 +74,7 @@ body {
 .boton-menu {
   display: inline-block;
   padding: 1rem 2rem;
-  background-color: rgba(0, 0, 0, 0.25); /* semitransparente */
+  background-color: transparent; /* rgba(0, 0, 0, 0.25); /* semitransparente */
   color: var(--color-ppal);
   font-size: 24px;
   font-weight: bold;
