@@ -254,3 +254,32 @@ section p {
 .estilosMenu section p {
   color: #000000; /* platos en negro */
 }
+
+
+.listaPlatos {
+  padding: 20px;
+  max-width: 600px;
+  margin: auto;
+  text-align: left;
+  font-family: 'Cardo', serif;
+}
+
+.menu-simple {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-simple li {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(188,147,57,0.3); /* dorado muy suave */
+  font-size: 1.2rem;
+}
+
+.menu-simple .precio {
+  font-weight: bold;
+  color: rgb(188,147,57);
+}
+
