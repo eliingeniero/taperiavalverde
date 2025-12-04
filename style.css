@@ -1,6 +1,6 @@
 /* ====== Variables de color ====== */
 :root {
-  --color-ppal: rgb(188,147,57);  /* granate/dorado del título */
+  --color-ppal: rgb(84,0,0);  /* granate (84,0,0) / dorado (188,147,57)  del título */
   --color-sec: #000000;            /* negro */
   --color-fondo: rgb(0,127,99);    /* verde principal de fondo */
   --color-fondo-semi: rgba(255,255,255,0.1); /* fondo semitransparente para secciones */
