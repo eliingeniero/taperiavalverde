@@ -153,7 +153,7 @@ body {
 
 /* ====== Grupos de platos ====== */
 .gruposPlatos {
-  background-color: var(--color-fondo-semi);
+  background-color: var(--color-fondo);
   color: var(--color-sec);
   padding: 2rem 1rem;
   margin-bottom: var(--separacion-grupo);
