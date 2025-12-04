@@ -12,8 +12,8 @@
   --letras-expl: 1rem;         /* tamaño de la explicación */
   --letras-precio: 1rem;       /* tamaño del precio */
 
-  /* Separación entre platos */
-  --separacion-platos: 2rem;   /* margen inferior entre platos */
+  /* Separación entre grupos de platos */
+  --separacion-grupo: 2rem;
 }
 
 /* ====== Reset y básicos ====== */
@@ -47,8 +47,8 @@ body, html {
   display: inline-block;
 }
 
-/* ====== Pantalla1 (Index Hero) ====== */
-.pantalla1 {
+/* ====== Pantalla Hero ====== */
+.pantallaPpal {
   height: 100vh;
   display: flex;
   align-items: center;
@@ -81,7 +81,7 @@ body, html {
   margin-top: 1rem;
 }
 
-/* ====== Pantalla1 Abajo ====== */
+/* ====== Pantalla abajo ====== */
 .pantalla1abajo {
   padding: 3rem 1rem;
   background-color: var(--color-blanco);
@@ -147,51 +147,40 @@ body, html {
   text-decoration: underline;
 }
 
-/* ====== Secciones del menú ====== */
-section {
+/* ====== Grupos de platos ====== */
+.gruposPlatos {
   background-color: var(--color-fondo-semi);
   color: var(--color-sec);
   padding: 2rem 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: var(--separacion-grupo);
   border-radius: 8px;
   text-align: center;
 }
 
-section h2 {
+.gruposPlatosMenu {
   color: var(--color-ppal);
   margin-bottom: 1rem;
 }
 
-/* Platos */
-section p {
-  display: block;
-  margin-bottom: var(--separacion-platos);
-}
-
-section p strong {
+/* ====== Platos ====== */
+.platosNombre {
   font-size: var(--letras-platos);
   color: var(--color-ppal);
+  display: block;
 }
 
-section p small {
+.platosExplic {
   font-size: var(--letras-expl);
   color: var(--color-sec);
+  display: block;
+  margin-bottom: 0.25rem;
 }
 
-section p span {
+.platosPrecio {
   font-size: var(--letras-precio);
   color: var(--color-ppal);
-}
-
-section ul li {
-  font-size: var(--letras-expl);
-  color: var(--color-sec);
-  margin-bottom: calc(var(--separacion-platos) / 2);
-}
-
-section small {
-  font-size: var(--letras-expl);
-  color: var(--color-sec);
+  display: block;
+  margin-bottom: var(--separacion-grupo);
 }
 
 /* ====== Responsive ====== */
@@ -223,16 +212,11 @@ section small {
   }
 
   /* Platos centrados en móvil */
-  section p {
+  .platosNombre,
+  .platosExplic,
+  .platosPrecio {
     text-align: center;
     word-break: break-word;
-    margin-bottom: var(--separacion-platos);
-  }
-
-  section ul li {
-    display: block;
-    margin-bottom: calc(var(--separacion-platos) / 2);
-    text-align: center;
   }
 
   /* Barra de navegación en móvil: saltos de línea */
