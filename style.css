@@ -1,10 +1,16 @@
-/* ====== Variables de color ====== */
+/* ====== Variables de color y tamaños ====== */
 :root {
-  --color-ppal: rgb(84,0,0);  /* granate (84,0,0) / dorado (188,147,57)  del título */
-  --color-sec: #000000;            /* negro */
-  --color-fondo: rgb(0,127,99);    /* verde principal de fondo */
-  --color-fondo-semi: rgba(255,255,255,0.1); /* fondo semitransparente para secciones */
+  /* Colores */
+  --color-ppal: rgb(84,0,0);  /* granate */
+  --color-sec: #000000;       /* negro */
+  --color-fondo: rgb(0,127,99); /* verde de fondo */
+  --color-fondo-semi: rgba(255,255,255,0.1); /* fondo semitransparente */
   --color-blanco: #FFFFFF;
+
+  /* Tamaños de letra */
+  --letras-platos: 1.2rem;     /* tamaño de los nombres de los platos */
+  --letras-expl: 1rem;         /* tamaño de la explicación */
+  --letras-precio: 1rem;       /* tamaño del precio */
 }
 
 /* ====== Reset y básicos ====== */
@@ -19,12 +25,12 @@ body, html {
 
 /* ====== Títulos grandes ====== */
 .titulo {
-  display: flex;           /* contenedor flex */
-  justify-content: center; /* centra la palabra completa */
-  align-items: flex-start; /* alinea ambos por la parte superior */
-  flex-wrap: nowrap;       /* evita que se rompa en varias líneas */
-  gap: 0;                  /* sin espacio extra entre V y ALVERDE */
-  white-space: nowrap;     /* fuerza que sea una sola línea */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  gap: 0;
+  white-space: nowrap;
 }
 
 .titulo-v {
@@ -36,9 +42,7 @@ body, html {
   font-size: clamp(53px, 10vw, 160px);
   line-height: 1;
   display: inline-block;
- /* transform: translateY(0.05em); /* ajusta este valor hasta que se vea bien */
 }
-
 
 /* ====== Pantalla1 (Index Hero) ====== */
 .pantalla1 {
@@ -63,7 +67,7 @@ body, html {
 .boton-menu {
   display: inline-block;
   padding: 1rem 2rem;
-  background-color: rgba(0, 0, 0, 0.25); /* negro al 50% de opacidad */
+  background-color: rgba(0, 0, 0, 0.25); /* semitransparente */
   color: var(--color-ppal);
   font-size: 24px;
   font-weight: bold;
@@ -155,14 +159,29 @@ section h2 {
   margin-bottom: 1rem;
 }
 
-section p strong,
-section p span {
+/* Platos */
+section p strong {
+  font-size: var(--letras-platos);
   color: var(--color-ppal);
 }
 
-section p small,
-section ul li,
+section p small {
+  font-size: var(--letras-expl);
+  color: var(--color-sec);
+}
+
+section p span {
+  font-size: var(--letras-precio);
+  color: var(--color-ppal);
+}
+
+section ul li {
+  font-size: var(--letras-expl);
+  color: var(--color-sec);
+}
+
 section small {
+  font-size: var(--letras-expl);
   color: var(--color-sec);
 }
 
@@ -189,5 +208,18 @@ section small {
 
   .pantalla1abajo {
     padding: 2rem 1rem;
+  }
+
+  /* Secciones en móvil: cada plato en bloque */
+  section p {
+    display: block;
+    text-align: left;
+    margin-bottom: 1rem;
+    word-break: break-word;
+  }
+
+  section ul li {
+    display: block;
+    margin-bottom: 0.5rem;
   }
 }
