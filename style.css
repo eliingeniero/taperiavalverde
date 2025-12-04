@@ -18,11 +18,16 @@
 }
 
 /* ====== Reset y básicos ====== */
-body, html {
+html {
+  scroll-behavior: smooth;
+  /* Ajuste para que las secciones no queden ocultas debajo de la barra sticky */
+  scroll-padding-top: calc(1rem + 2px + env(safe-area-inset-top));
+}
+
+body {
   margin: 0;
   padding: 0;
   font-family: 'Cardo', serif;
-  scroll-behavior: smooth;
   color: var(--color-sec);
   background-color: var(--color-fondo);
 }
