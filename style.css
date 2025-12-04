@@ -1,8 +1,8 @@
 /* ====== Variables de color ====== */
 :root {
-  --color-ppal: rgb(84,0,0);           /* granate del título */
-  --color-sec: #000000;                 /* negro */
-  --color-fondo: rgb(0,127,99);        /* verde principal de fondo */
+  --color-ppal: rgb(84,0,0);  /* granate (84,0,0) / dorado (188,147,57)  del título */
+  --color-sec: #000000;            /* negro */
+  --color-fondo: rgb(0,127,99);    /* verde principal de fondo */
   --color-fondo-semi: rgba(255,255,255,0.1); /* fondo semitransparente para secciones */
   --color-blanco: #FFFFFF;
 }
@@ -19,26 +19,24 @@ body, html {
 
 /* ====== Títulos grandes ====== */
 .titulo {
-  display: flex;
-  justify-content: center;
-  align-items: baseline; /* alinea verticalmente V y resto */
-  flex-wrap: nowrap;      /* evita salto de línea */
+  text-align: center;
   line-height: 1;
 }
 
 .titulo-v,
 .titulo-resto {
   display: inline-block;
+  vertical-align: top;
   margin: 0;
   line-height: 1;
 }
 
 .titulo-v {
-  font-size: clamp(60px, 12vw, 240px);
+  font-size: clamp(80px, 15vw, 240px);
 }
 
 .titulo-resto {
-  font-size: clamp(50px, 10vw, 160px);
+  font-size: clamp(53px, 10vw, 160px);
 }
 
 /* ====== Pantalla1 (Index Hero) ====== */
@@ -64,13 +62,13 @@ body, html {
 .boton-menu {
   display: inline-block;
   padding: 1rem 2rem;
-  background-color: rgba(0,0,0,0.7); /* semitransparente */
+  background-color: black;
   color: var(--color-ppal);
   font-size: 24px;
   font-weight: bold;
   text-decoration: none;
   border-radius: 8px;
-  border: 2px solid rgba(0,0,0,0.7);
+  border: 2px solid black;
   transition: transform 0.2s, background-color 0.2s;
   margin-top: 1rem;
 }
@@ -170,11 +168,11 @@ section small {
 /* ====== Responsive ====== */
 @media (max-width: 768px) {
   .titulo-v {
-    font-size: clamp(50px, 18vw, 240px);
+    font-size: clamp(60px, 20vw, 240px);
   }
 
   .titulo-resto {
-    font-size: clamp(45px, 16vw, 160px);
+    font-size: clamp(40px, 15vw, 160px);
   }
 
   .boton-menu {
