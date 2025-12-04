@@ -15,16 +15,11 @@
 
   /* Separación entre grupos de platos */
   --separacion-grupo: 2rem;
-
-  /* Altura de la barra sticky (para compensar scroll) */
-  --altura-barraNav: 5rem;
 }
 
 /* ====== Reset y básicos ====== */
 html {
   scroll-behavior: smooth;
-  /* Ajusta el scroll automático para que las secciones queden visibles debajo de la barra sticky */
-  scroll-padding-top: var(--altura-barraNav);
 }
 
 body {
@@ -164,17 +159,7 @@ body {
   margin-bottom: var(--separacion-grupo);
   border-radius: 8px;
   text-align: center;
-
-  /* Pseudo-elemento invisible para compensar barra sticky */
-  position: relative;
-}
-
-.gruposPlatos::before {
-  content: '';
-  display: block;
-  height: var(--altura-barraNav);
-  margin-top: calc(-1 * var(--altura-barraNav));
-  visibility: hidden;
+  scroll-margin-top: calc(1rem + 2px); /* evita que la barra sticky tape la sección */
 }
 
 .gruposPlatosMenu {
