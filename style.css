@@ -2,47 +2,32 @@
 body, html {
   margin: 0;
   padding: 0;
-  font-family: 'Cardo', serif; /* fuente Cardo */
+  font-family: 'Cardo', serif;
   scroll-behavior: smooth;
-  color: rgb(2,0,0); /* letras doradas oscuras */
+  color: rgb(2,0,0);
+  background-color: rgb(0,127,99);
 }
 
-/* ====== Pantalla1 (antes Hero) ====== */
+/* ====== Pantalla1 (inicio) ====== */
 .pantalla1 {
   height: 100vh;
-  /*background-image: url('images/fondo.png'); /* tu imagen */
-  background-color: rgb(1,59,54); /* color sólido verde */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: rgb(188,147,57); /* letras */
-  position: relative;
+  background-color: rgb(1,59,54);
+  color: rgb(188,147,57);
 }
 
-/* Rectángulo con título y botón */
 .rectangulo {
-  background-color: rgba(30,71,66,0); /* verde semitransparente */
+  background-color: rgba(30,71,66,0.7);
   padding: 2rem 1rem;
   border-radius: 12px;
-  max-width: 90vw; /* no se salga del ancho de la pantalla */
-  text-align: center;
+  max-width: 90vw;
 }
 
-/* Título con V grande y resto proporcional */
 .titulo {
   text-align: center;
-  line-height: 1;
-}
-
-.titulo-v,
-.titulo-resto {
-  display: inline-block;
-  vertical-align: top; /* fuerza alineación por arriba */
-  margin: 0;
   line-height: 1;
 }
 
@@ -54,23 +39,19 @@ body, html {
   font-size: clamp(53px, 10vw, 160px);
 }
 
-/* Botón debajo del título */
 .boton-menu {
   display: inline-block;
   padding: 1rem 2rem;
-  background-color: black; /* fondo del botón */
-  color: rgb(188,147,57); /* texto dorado */
-  font-family: 'Cardo', serif;
-  font-size: 24px;
+  background-color: black;
+  color: rgb(188,147,57);
+  font-size: 1.2rem;
   font-weight: bold;
   text-decoration: none;
   border-radius: 8px;
-  border: 2px solid black;
-  transition: transform 0.2s, background-color 0.2s;
   margin-top: 1rem;
 }
 
-/* ====== Pantalla1 Abajo (antes Info) ====== */
+/* ====== Pantalla1 Abajo ====== */
 .pantalla1abajo {
   padding: 3rem 1rem;
   background-color: #FFFFFF;
@@ -79,7 +60,6 @@ body, html {
 }
 
 .pantalla1abajo h2 {
-  color: rgb(2,0,0);
   margin-top: 2rem;
 }
 
@@ -93,198 +73,140 @@ body, html {
 }
 
 /* ====== Menú ====== */
-/* Logo / encabezado en menú */
+.estilosMenu {
+  font-family: 'Cardo', serif;
+  padding-bottom: 3rem;
+  background-color: rgb(0,127,99);
+}
+
+/* Logo y encabezado */
 .tituloarriba {
   text-align: center;
   padding: 1.5rem 0 0.5rem 0;
-  background-color: #FFFFFF;
-  border-bottom: 1px solid rgb(0,127,99);
+  background-color: rgb(0,127,99);
+  border-bottom: 2px solid #BC9339;
 }
 
 .tituloarriba .logo {
   display: flex;
   justify-content: center;
-  align-items: flex-start; /* alinea por arriba */
-  font-weight: 700;
+  color: #BC9339;
   text-decoration: none;
-  color: rgb(2,0,0);
 }
 
-.tituloarriba .logo .titulo-v {
+.tituloarriba .titulo-v {
   font-size: clamp(60px, 8vw, 120px);
-  line-height: 1;
 }
 
-.tituloarriba .logo .titulo-resto {
+.tituloarriba .titulo-resto {
   font-size: clamp(40px, 5vw, 80px);
-  line-height: 1;
 }
 
-.tituloarriba .logo:hover {
-  text-decoration: underline;
-}
-
-/* Barra de navegación fija */
+/* Barra de navegación */
 .barraNav {
   text-align: center;
   margin: 0;
   padding: 1rem 0;
   position: sticky;
   top: 0;
-  background-color: #FFFFFF;
+  background-color: rgb(0,127,99);
+  border-bottom: 2px solid #BC9339;
   z-index: 100;
-  border-bottom: 1px solid rgb(0,127,99);
 }
 
 .barraNav a {
   text-decoration: none;
-  color: rgb(2,0,0);
+  color: #BC9339;
   font-weight: bold;
-  margin: 0 1rem;
+  margin: 0 0.5rem;
 }
 
 .barraNav a:hover {
   text-decoration: underline;
 }
 
-/* Centrar contenido de cada sección del menú */
-section#entrantes,
-section#compartir,
-section#platos,
-section#bebidas,
-section#postres {
-  padding: 2rem 1rem 3rem 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  color: rgb(2,0,0);
-}
-
-section h2 {
-  margin-bottom: 1rem;
-  color: rgb(2,0,0);
-}
-
-section p {
-  margin: 0.3rem 0;
-  color: rgb(2,0,0);
-}
-
-/* ====== Responsive ====== */
-@media (max-width: 768px) {
-  .titulo {
-    font-size: 2rem;
-  }
-
-  .titulo-v {
-    font-size: clamp(60px, 20vw, 240px);
-  }
-
-  .titulo-resto {
-    font-size: clamp(40px, 15vw, 160px);
-  }
-
-  .boton-menu {
-    padding: 0.8rem 1.5rem;
-    font-size: 0.9rem;
-  }
-
-  .rectangulo {
-    padding: 1.5rem;
-    border-radius: 8px;
-    background-color: rgba(0,127,99,0.5);
-  }
-
-  .pantalla1abajo {
-    padding: 2rem 1rem;
-  }
-}
-
-/* ====== Estilos específicos para menu.html ====== */
-.estilosMenu {
-  background-color: rgb(0,127,99); /* fondo verde */
-  color: #000000; /* texto negro por defecto */
-  font-family: 'Cardo', serif;
-  padding-bottom: 3rem;
-}
-
-/* Logo / título */
-.estilosMenu .tituloarriba {
-  background-color: rgb(0,127,99); /* fondo verde del header */
-  border-bottom: 2px solid #BC9339; /* dorado */
-}
-
-.estilosMenu .tituloarriba .logo {
-  color: #BC9339; /* títulos dorados */
-}
-
-.estilosMenu .tituloarriba .logo .titulo-v,
-.estilosMenu .tituloarriba .logo .titulo-resto {
-  color: #BC9339; /* título completo dorado */
-}
-
-/* Barra de navegación */
-.estilosMenu .barraNav {
-  background-color: rgb(0,127,99); /* fondo verde */
-  border-bottom: 2px solid #BC9339; /* línea dorada */
-}
-
-.estilosMenu .barraNav a {
-  color: #BC9339; /* enlaces dorados */
-}
-
-.estilosMenu .barraNav a:hover {
-  text-decoration: underline;
-}
-
 /* Secciones del menú */
 .estilosMenu section {
-  background-color: rgba(255,255,255,0.1); /* ligero fondo semitransparente */
-  color: #000000; /* texto negro */
+  background-color: rgba(255,255,255,0.1);
+  color: #000000;
   padding: 2rem 1rem;
-  margin-bottom: 1rem;
+  margin: 1rem auto;
   border-radius: 8px;
   max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 /* Títulos de sección */
 .estilosMenu section h2 {
-  color: #BC9339; /* títulos de sección dorados */
+  color: #BC9339;
+  font-size: 2rem;
   margin-bottom: 1.5rem;
   text-align: center;
-  font-size: 2rem;
 }
 
-/* ====== Estilos menú nuevo ====== */
-
-/* Platos dentro de las secciones */
+/* Platos: nombre, descripción y precio */
 .estilosMenu section p {
-  margin: 0.5rem 0;
+  margin: 1rem 0;
   line-height: 1.4;
 }
 
-/* Nombre del plato */
 .estilosMenu section p strong {
   display: block;
-  color: #BC9339; /* dorado */
+  color: #BC9339;
   font-size: 1.2rem;
   margin-bottom: 0.2rem;
 }
 
-/* Descripción del plato */
 .estilosMenu section p small {
   display: block;
   font-size: 0.9rem;
-  color: #f0f0f0; /* blanco suave */
+  color: #f0f0f0;
   margin-bottom: 0.2rem;
 }
 
-/* Precio */
 .estilosMenu section p span {
   display: block;
-  color: #BC9339; /* dorado */
+  color: #BC9339;
   font-weight: bold;
+}
+
+/* Listas (salsas) */
+.estilosMenu section ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.estilosMenu section ul li {
+  margin: 0.3rem 0;
+  color: #f0f0f0;
+  font-size: 1rem;
+}
+
+/* Último texto (small) en salsas */
+.estilosMenu section small {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #f0f0f0;
+}
+
+/* ====== Responsive ====== */
+@media (max-width: 768px) {
+  .titulo-v {
+    font-size: clamp(50px, 20vw, 120px);
+  }
+
+  .titulo-resto {
+    font-size: clamp(30px, 15vw, 80px);
+  }
+
+  .boton-menu {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .estilosMenu section {
+    padding: 1.5rem 1rem;
+    margin: 1rem 1rem;
+  }
 }
