@@ -1,16 +1,19 @@
 /* ====== Variables de color y tamaños ====== */
 :root {
   /* Colores */
-  --color-ppal: rgb(84,0,0);  /* granate */
-  --color-sec: #000000;       /* negro */
-  --color-fondo: rgb(0,127,99); /* verde de fondo */
+  --color-ppal: rgb(84,0,0);           /* granate */
+  --color-sec: #000000;                /* negro */
+  --color-fondo: rgb(0,127,99);        /* verde de fondo */
   --color-fondo-semi: rgba(255,255,255,0.1); /* fondo semitransparente */
   --color-blanco: #FFFFFF;
 
   /* Tamaños de letra */
-  --letras-platos: 1.2rem;     /* tamaño de los nombres de los platos */
+  --letras-platos: 1.3rem;     /* tamaño de los nombres de los platos */
   --letras-expl: 1rem;         /* tamaño de la explicación */
   --letras-precio: 1rem;       /* tamaño del precio */
+
+  /* Separación entre platos */
+  --separacion-platos: 2rem;   /* margen inferior entre platos */
 }
 
 /* ====== Reset y básicos ====== */
@@ -160,6 +163,11 @@ section h2 {
 }
 
 /* Platos */
+section p {
+  display: block;
+  margin-bottom: var(--separacion-platos);
+}
+
 section p strong {
   font-size: var(--letras-platos);
   color: var(--color-ppal);
@@ -178,6 +186,7 @@ section p span {
 section ul li {
   font-size: var(--letras-expl);
   color: var(--color-sec);
+  margin-bottom: calc(var(--separacion-platos) / 2);
 }
 
 section small {
@@ -215,27 +224,26 @@ section small {
 
   /* Platos centrados en móvil */
   section p {
-    display: block;
-    text-align: center;  /* centrado */
-    margin-bottom: 1rem;
+    text-align: center;
     word-break: break-word;
+    margin-bottom: var(--separacion-platos);
   }
 
   section ul li {
     display: block;
-    margin-bottom: 0.5rem;
-    text-align: center; /* centrado */
+    margin-bottom: calc(var(--separacion-platos) / 2);
+    text-align: center;
   }
 
   /* Barra de navegación en móvil: saltos de línea */
   .barraNav {
     display: flex;
-    flex-direction: column; /* enlaces uno debajo de otro */
+    flex-direction: column;
     align-items: center;
     gap: 0.5rem;
   }
 
   .barraNav a {
-    margin: 0; /* elimina los márgenes horizontales */
+    margin: 0;
   }
 }
