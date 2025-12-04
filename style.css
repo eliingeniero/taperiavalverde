@@ -21,7 +21,7 @@ body, html {
 .titulo {
   display: flex;           /* contenedor flex */
   justify-content: center; /* centra la palabra completa */
-  align-items: baseline;   /* alinea ambos por la línea base */
+  align-items: flex-start; /* alinea ambos por la parte superior */
   flex-wrap: nowrap;       /* evita que se rompa en varias líneas */
   gap: 0;                  /* sin espacio extra entre V y ALVERDE */
   white-space: nowrap;     /* fuerza que sea una sola línea */
