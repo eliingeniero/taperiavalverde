@@ -187,6 +187,8 @@ section small {
 
 /* ====== Responsive ====== */
 @media (max-width: 768px) {
+
+  /* Títulos grandes */
   .titulo-v {
     font-size: clamp(60px, 20vw, 240px);
   }
@@ -195,6 +197,7 @@ section small {
     font-size: clamp(40px, 15vw, 160px);
   }
 
+  /* Botón principal */
   .boton-menu {
     padding: 0.8rem 1.5rem;
     font-size: 0.9rem;
@@ -210,10 +213,10 @@ section small {
     padding: 2rem 1rem;
   }
 
-  /* Secciones en móvil: cada plato en bloque */
+  /* Platos centrados en móvil */
   section p {
     display: block;
-    text-align: left;
+    text-align: center;  /* centrado */
     margin-bottom: 1rem;
     word-break: break-word;
   }
@@ -221,5 +224,18 @@ section small {
   section ul li {
     display: block;
     margin-bottom: 0.5rem;
+    text-align: center; /* centrado */
+  }
+
+  /* Barra de navegación en móvil: saltos de línea */
+  .barraNav {
+    display: flex;
+    flex-direction: column; /* enlaces uno debajo de otro */
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .barraNav a {
+    margin: 0; /* elimina los márgenes horizontales */
   }
 }
