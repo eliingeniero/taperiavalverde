@@ -19,25 +19,24 @@ body, html {
 
 /* ====== Títulos grandes ====== */
 .titulo {
-  text-align: center;
-  line-height: 1;
-}
-
-.titulo-v,
-.titulo-resto {
-  display: inline-block;
-  vertical-align: top;
-  margin: 0;
-  line-height: 1;
+  display: flex;           /* contenedor flex */
+  justify-content: center; /* centra la palabra completa */
+  align-items: baseline;   /* alinea ambos por la línea base */
+  flex-wrap: nowrap;       /* evita que se rompa en varias líneas */
+  gap: 0;                  /* sin espacio extra entre V y ALVERDE */
+  white-space: nowrap;     /* fuerza que sea una sola línea */
 }
 
 .titulo-v {
   font-size: clamp(80px, 15vw, 240px);
+  line-height: 1;
 }
 
 .titulo-resto {
   font-size: clamp(53px, 10vw, 160px);
+  line-height: 1;
 }
+
 
 /* ====== Pantalla1 (Index Hero) ====== */
 .pantalla1 {
