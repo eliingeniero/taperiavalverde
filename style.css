@@ -20,7 +20,7 @@
 /* ====== Reset y básicos ====== */
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 58px; /* Ajusta este valor a la altura de tu barra sticky */
+  scroll-padding-top: 70px; /* Ajusta este valor a la altura de tu barra sticky */
 }
 
 body {
